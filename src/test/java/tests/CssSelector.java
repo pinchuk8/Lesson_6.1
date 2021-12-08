@@ -33,6 +33,31 @@ public class CssSelector {
 
         By valueEndsWithSelector1 = By.cssSelector("a[href$='@gmail.com']"); //поиск элемента с аттрибутом значение который заканчивается на...
 
+        By childAfterParentSelector1 = By.cssSelector("ul>li"); //поиск очернего сразу за непосредственным родителем
+        By elementRightAfterElementSelector2 = By.cssSelector("ul>li a"); //поиск очернего сразу за непосредственным родителем с поиском содержания а
+
+        By  elementRightAfterElementSelector2= By.cssSelector("#form+script"); //поиск элемента sript который идёт сразу после элемента form
+
+        By elementOnTheSameLevelElementSelector2 = By.cssSelector("#form~script"); //поиск элемента script который  (не сразу) предшествует элемент form
+
+        By firstChildSelector2 = By.cssSelector("li:first-child"); //поиск первого дочернего эелмента
+        By lastChildSelector2 = By.cssSelector("li:last-child"); //поиск последнего дочернего элемента
+        By nthChildFromBeginSelector2 = By.cssSelector("li:nth-child(2)"); //поиск н-ного дочернего элемента с начала
+        By nthChildFromEndSelector2 = By.cssSelector("li:nth-last-child(3)"); //поиск н-ного дочернего эелментоа с конца
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
