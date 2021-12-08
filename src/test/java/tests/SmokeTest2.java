@@ -13,6 +13,8 @@ public class SmokeTest2 {
 
     @Test
     public void test1() {
+
+        // Вводные данные для тестирования
         String creatinineValue = "80";
         String ageValue = "38";
         String weightValue = "55";
@@ -20,16 +22,18 @@ public class SmokeTest2 {
 
 
 
+        // Ожидаемые данные тестирования
         String expectedMDRD = "MDRD: 74 (мл/мин/1,73кв.м)";
         String expectedMDRD1 = "ХБП: 2 стадия (при наличии почечного повреждения)";
         String expectedCG = "Cockroft-Gault: 70 (мл/мин)";
         String expectedBSA = "Поверхность тела:1.58 (кв.м)";
 
+        //Описание драйвера
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 
         //1.Открыть браузер и перейти на тестируемую страницу
         ChromeDriver driver = new ChromeDriver();
-        driver.get(URL);
+        driver.get(URL); //переменныя URL задана в начале страницы
 
         //2. Выбрать пол
         WebElement sexElement = driver.findElement(By.id("oSex"));
