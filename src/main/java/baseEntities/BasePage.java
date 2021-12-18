@@ -10,10 +10,12 @@ public class BasePage {
     public BasePage(WebDriver driver) {
         this.driver = driver;
     }
-    public boolean isPageOpen(By by){
+
+    public boolean isPageOpened(By by){
         try{
         return driver.findElement(by).isDisplayed();
     }catch (NoSuchElementException nsex){
-        return false}
+        return false;
+        }
     }
 }

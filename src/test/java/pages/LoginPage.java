@@ -1,38 +1,43 @@
 package pages;
 
 import baseEntities.BasePage;
+import com.tms.core.ReadProperties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
     //Описание элементов страницы
-    private  By PAGE_OPEN_IDENTIFIER = By.className("loginpage-installationname");
-    private By emailSelector = By.id("name");
-    private By passwordSelector = By.id("password");
-    private By loginSelector = By.id("button_primary");
+    private  By PAGE_OPENED_IDENTIFIER = By.className("logo-loginpage");
+    private By email_Selector = By.id("name");
+    private By password_Selector = By.id("password");
+    private By login_Selector = By.id("button_primary");
 
-    public WebDriver driver;
+    //private WebDriver driver;
 
     //Конструктор страницы
-      public LoginPage (WebDriver driver){
-          this. driver =driver;
+    public LoginPage (WebDriver driver){
+        super(driver);
+        this. driver =driver;
     }
     public boolean isPageOpened(){
-          return !super.isPageOpen(PAGE_OPEN_IDENTIFIER);
+          return !super.isPageOpened(PAGE_OPENED_IDENTIFIER);
     }
     // Реализация гетерров элементов
     public WebElement getEmailField(){
-        return driver.findElement(emailSelector);
+        return driver.findElement(email_Selector);
     }
     public WebElement getPasswordField(){
-        return driver.findElement(passwordSelector);
+        return driver.findElement(password_Selector);
     }
-    public WebElement getLoginField(){
-        return driver.findElement(loginSelector);
+    public WebElement getLoginButton(){
+        return driver.findElement(login_Selector);
     }
-    //Реализация базовых элементов
-    public void login (String username,String password){
-          loginPage =
+    //Реализация базовых методов
+    public void login()  {
+        getEmailField().sendKeys(ReadProperties.getUsername());
+        getPasswordField().sendKeys(ReadProperties.getPassword());
+        getLoginButton().click();
+
     }
 }

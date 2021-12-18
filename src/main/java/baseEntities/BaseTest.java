@@ -18,21 +18,21 @@ import org.testng.annotations.BeforeMethod;
         @BeforeMethod
         public void setUp(){
             switch (ReadProperties.getBrowserType().toLowerCase()){
+
                 case "chrome":
                     WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
                     ChromeOptions chromeOptions= new ChromeOptions();
-                    chromeOptions.addArguments("--disable-gpu");
-                    chromeOptions.addArguments("--silent");
+                    chromeOptions.addArguments("--disable-gpu");//отключение графического процесса (дизайн)
+                    chromeOptions.addArguments("--silent");//работает без информирования
                     chromeOptions.setHeadless(ReadProperties.getHeadless());
-                    //перенабрать
                     driver=new ChromeDriver(chromeOptions);
-
                     break;
+
                 case "firefox":
                     WebDriverManager.getInstance(DriverManagerType.FIREFOX).setup();
-
                     driver = new FirefoxDriver();
                     break;
+
                 default:
                     System.out.println("данный браузер не поддерживается");
                     break;
