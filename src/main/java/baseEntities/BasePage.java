@@ -11,11 +11,11 @@ public class BasePage {
         this.driver = driver;
     }
 
-    public boolean isPageOpened(By by){
-        try{
-        return driver.findElement(by).isDisplayed();
-    }catch (NoSuchElementException nsex){
-        return false;
+    public boolean isPageOpened(By by) {
+        try {
+            return driver.findElement(by).isDisplayed();
+        } catch (NoSuchElementException nsex) {
+            return false;
         }
     }
 }

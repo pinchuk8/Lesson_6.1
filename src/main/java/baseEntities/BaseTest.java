@@ -12,38 +12,41 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-    public class BaseTest {
-        protected WebDriver driver;
+import java.util.concurrent.TimeUnit;
 
-        @BeforeMethod
-        public void setUp(){
-            switch (ReadProperties.getBrowserType().toLowerCase()){
+public class BaseTest {
+    protected WebDriver driver;
 
-                case "chrome":
-                    WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
-                    ChromeOptions chromeOptions= new ChromeOptions();
-                    chromeOptions.addArguments("--disable-gpu");//отключение графического процесса (дизайн)
-                    chromeOptions.addArguments("--silent");//работает без информирования
-                    chromeOptions.setHeadless(ReadProperties.getHeadless());
-                    driver=new ChromeDriver(chromeOptions);
-                    break;
+    @BeforeMethod
+    public void setUp() {
+        switch (ReadProperties.getBrowserType().toLowerCase()) {
 
-                case "firefox":
-                    WebDriverManager.getInstance(DriverManagerType.FIREFOX).setup();
-                    driver = new FirefoxDriver();
-                    break;
+            case "chrome":
+                WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--disable-gpu");//отключение графического процесса (дизайн)
+                chromeOptions.addArguments("--silent");//работает без информирования
+                chromeOptions.setHeadless(ReadProperties.getHeadless());
+                driver = new ChromeDriver(chromeOptions);
+                break;
 
-                default:
-                    System.out.println("данный браузер не поддерживается");
-                    break;
-            }
-            driver.manage().window().maximize();
-            driver.get(ReadProperties.getUrl());
+            case "firefox":
+                WebDriverManager.getInstance(DriverManagerType.FIREFOX).setup();
+                driver = new FirefoxDriver();
+                break;
 
+            default:
+                System.out.println("данный браузер не поддерживается");
+                break;
         }
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.get(ReadProperties.getUrl());
 
-        @AfterMethod
-        public void tearDown(){
-            driver.quit();
-        }
     }
+
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
+    }
+}
