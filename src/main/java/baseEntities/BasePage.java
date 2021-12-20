@@ -14,6 +14,6 @@ public class BasePage {
         try{
         return driver.findElement(by).isDisplayed();
     }catch (NoSuchElementException nsex){
-        return false}
+        return false;}
     }
 }
