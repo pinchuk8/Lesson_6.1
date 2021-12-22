@@ -14,7 +14,7 @@ public class Homework1 {
     static String URL3 = "https://calc.by/building-calculators/laminate.html";
 
     @Test
-    public void test1 () {
+    public void test1() {
         //входные данные для теста
         String widthValue = "3";
         String lenghtValue = "5";
@@ -51,21 +51,21 @@ public class Homework1 {
         heatingDropDown.selectByValue("2");
 
         //6. Нажать рассчитать
-       WebElement calculate = driver.findElement(By.cssSelector("input[type = 'button']"));
-       calculate.click();
+        WebElement calculate = driver.findElement(By.cssSelector("input[type = 'button']"));
+        calculate.click();
 
-
-        String actual_floor_cable_power= driver.findElement(By.id("floor_cable_power")).getAttribute("value");
+        String actual_floor_cable_power = driver.findElement(By.id("floor_cable_power")).getAttribute("value");
         String actual_spec_floor_cable_power = driver.findElement(By.id("spec_floor_cable_power")).getAttribute("value");
 
-        Assert.assertEquals(actual_floor_cable_power,expected_floor_cable_power,"floor");
-        Assert.assertEquals(actual_spec_floor_cable_power,expected_spec_floor_cable_power,"spec");
+        Assert.assertEquals(actual_floor_cable_power, expected_floor_cable_power, "floor");
+        Assert.assertEquals(actual_spec_floor_cable_power, expected_spec_floor_cable_power, "spec");
 
         driver.quit();
 
     }
+
     @Test
-    public void test2 () throws InterruptedException {
+    public void test2() throws InterruptedException {
         //входные данные для теста
         String calc_roomwidth = "6";
         String calc_roomheight = "3";
@@ -75,6 +75,7 @@ public class Homework1 {
         String calc_price = "500";
         String calc_bias = "300";
         String calc_walldist = "10";
+
         //ожидаемые значения
         String expected_s_lam = "17.82 м2.";
         String expected_l_count = "285 шт.";
@@ -82,6 +83,7 @@ public class Homework1 {
         String expected_l_price = "9360 руб.";
         String expected_l_over = "3 шт.";
         String expected_l_trash = "15 шт.";
+
         //Описание драйвера
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         //1.Открыть браузер и перейти на тестируемую страницу
@@ -89,76 +91,76 @@ public class Homework1 {
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.get(URL2); //переменныя URL1 задана в начале страницы
+
         //2. Ввести данные
         WebElement roomwidth = driver.findElement(By.name("calc_roomwidth"));
-        roomwidth.sendKeys(Keys.CONTROL+ "a");
-        roomwidth.sendKeys(Keys.SHIFT+ "c");
+        roomwidth.sendKeys(Keys.CONTROL + "a");
+        roomwidth.sendKeys(Keys.SHIFT + "c");
         roomwidth.sendKeys(calc_roomwidth);
 
         WebElement roomheight = driver.findElement(By.name("calc_roomheight"));
-        roomheight.sendKeys(Keys.CONTROL+ "a");
-        roomheight.sendKeys(Keys.SHIFT+ "c");
+        roomheight.sendKeys(Keys.CONTROL + "a");
+        roomheight.sendKeys(Keys.SHIFT + "c");
         roomheight.sendKeys(calc_roomheight);
 
         WebElement lamwidth = driver.findElement(By.name("calc_lamwidth"));
-        lamwidth.sendKeys(Keys.CONTROL+ "a");
-        lamwidth.sendKeys(Keys.SHIFT+ "c");
+        lamwidth.sendKeys(Keys.CONTROL + "a");
+        lamwidth.sendKeys(Keys.SHIFT + "c");
         lamwidth.sendKeys(calc_lamwidth);
 
         WebElement lamheight = driver.findElement(By.name("calc_lamheight"));
-        lamheight.sendKeys(Keys.CONTROL+ "a");
-        lamheight.sendKeys(Keys.SHIFT+ "c");
+        lamheight.sendKeys(Keys.CONTROL + "a");
+        lamheight.sendKeys(Keys.SHIFT + "c");
         lamheight.sendKeys(calc_lamheight);
 
         WebElement inpack = driver.findElement(By.name("calc_inpack"));
-        inpack.sendKeys(Keys.CONTROL+ "a");
-        inpack.sendKeys(Keys.SHIFT+ "c");
+        inpack.sendKeys(Keys.CONTROL + "a");
+        inpack.sendKeys(Keys.SHIFT + "c");
         inpack.sendKeys(calc_inpack);
 
         WebElement price = driver.findElement(By.name("calc_price"));
-        price.sendKeys(Keys.CONTROL+ "a");
-        price.sendKeys(Keys.SHIFT+ "c");
+        price.sendKeys(Keys.CONTROL + "a");
+        price.sendKeys(Keys.SHIFT + "c");
         price.sendKeys(calc_price);
 
         WebElement bias = driver.findElement(By.name("calc_bias"));
-        bias.sendKeys(Keys.CONTROL+ "a");
-        bias.sendKeys(Keys.SHIFT+ "c");
+        bias.sendKeys(Keys.CONTROL + "a");
+        bias.sendKeys(Keys.SHIFT + "c");
         bias.sendKeys(calc_bias);
 
         WebElement walldist = driver.findElement(By.name("calc_lamheight"));
-        walldist.sendKeys(Keys.CONTROL+ "a");
-        walldist.sendKeys(Keys.SHIFT+ "c");
+        walldist.sendKeys(Keys.CONTROL + "a");
+        walldist.sendKeys(Keys.SHIFT + "c");
         walldist.sendKeys(calc_walldist);
 
         //4. Выбрать направление
         WebElement calc_direct = driver.findElement(By.name("calc_direct"));
         Select directDropDown = new Select(calc_direct);
         directDropDown.selectByValue("tow");
+
         //5. Нажать рассчитать
         WebElement calculate = driver.findElement(By.cssSelector("input[type = 'button']"));
         calculate.click();
 
+        String actual_s_lam = driver.findElement(By.id("s_lam")).getAttribute("innerText");
+        String actual_l_count = driver.findElement(By.id("l_count")).getAttribute("innerText");
+        String actual_l_packs = driver.findElement(By.id("l_packs")).getAttribute("innerText");
+        String actual_l_price = driver.findElement(By.id("l_price")).getAttribute("innerText");
+        String actual_l_over = driver.findElement(By.id("l_over")).getAttribute("innerText");
+        String actual_l_trash = driver.findElement(By.id("l_trash")).getAttribute("innerText");
 
-        String actual_s_lam= driver.findElement(By.id("s_lam")).getAttribute("innerText");
-        String actual_l_count= driver.findElement(By.id("l_count")).getAttribute("innerText");
-        String actual_l_packs= driver.findElement(By.id("l_packs")).getAttribute("innerText");
-        String actual_l_price= driver.findElement(By.id("l_price")).getAttribute("innerText");
-        String actual_l_over= driver.findElement(By.id("l_over")).getAttribute("innerText");
-        String actual_l_trash= driver.findElement(By.id("l_trash")).getAttribute("innerText");
+        Assert.assertEquals(actual_s_lam, expected_s_lam, "s_lam");
+        Assert.assertEquals(actual_l_count, expected_l_count, "l_count");
+        Assert.assertEquals(actual_l_packs, expected_l_packs, "l_packs");
+        Assert.assertEquals(actual_l_price, expected_l_price, "l_price");
+        Assert.assertEquals(actual_l_over, expected_l_over, "l_over");
+        Assert.assertEquals(actual_l_trash, expected_l_trash, "l_trash");
 
-
-        Assert.assertEquals(actual_s_lam,expected_s_lam,"s_lam");
-        Assert.assertEquals(actual_l_count,expected_l_count,"l_count");
-        Assert.assertEquals(actual_l_packs,expected_l_packs,"l_packs");
-        Assert.assertEquals(actual_l_price,expected_l_price,"l_price");
-        Assert.assertEquals(actual_l_over,expected_l_over,"l_over");
-        Assert.assertEquals(actual_l_trash,expected_l_trash,"l_trash");
-
-        //Thread.sleep(5000);
         driver.quit();
     }
+
     @Test
-    public void test3 () throws InterruptedException {
+    public void test3() throws InterruptedException {
 
         //Описание драйвера
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
@@ -174,8 +176,9 @@ public class Homework1 {
         String wd_room = "400";
         String ln_lam = "2000";
         String wd_lam = "200";
+
         //переменные с ожидаемыми значениями
-        String e_boards="53";
+        String e_boards = "53";
         String e_packeges = "7";
 
         //ввсти данные
@@ -205,23 +208,13 @@ public class Homework1 {
         String a_board = driver.findElement(By.cssSelector("[style*='22px']")).getAttribute("innerText");
         String a_packeges = driver.findElement(By.cssSelector("span[style*='C19']")).getAttribute("innerText");
 
-        /*Assert.assertEquals(a_board,e_boards,"boards");
-        Assert.assertEquals(a_packeges,e_packeges,"packeges");*/
-
         if (!a_board.equals("53")) {
             System.out.println("некорректное значение");
         }
-        if (!a_packeges.equals("7")){
+        if (!a_packeges.equals("7")) {
             System.out.println("некорректное значение");
         }
-
-        Thread.sleep(10000);
         driver.quit();
-
-
-
-
-
     }
 
 }
