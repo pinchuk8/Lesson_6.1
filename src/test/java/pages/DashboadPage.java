@@ -10,7 +10,6 @@ public class DashboadPage extends BasePage {
     private By PAGE_OPENED_IDENTIFIER = By.id("navigation-dashboard");
     private By Add_Selector = By.id("sidebar-projects-add");
 
-
     public DashboadPage(WebDriver driver) {
         super(driver);
     }
@@ -23,7 +22,4 @@ public class DashboadPage extends BasePage {
         return driver.findElement(Add_Selector);
     }
 
-    public void add() {
-        getAdd().click();
-    }
 }

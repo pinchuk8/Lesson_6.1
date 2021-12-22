@@ -13,13 +13,10 @@ public class LoginPage extends BasePage {
     private By password_Selector = By.id("password");
     private By login_Selector = By.id("button_primary");
 
-    //private WebDriver driver;
-
     //Конструктор страницы
     public LoginPage(WebDriver driver) {
         super(driver);
     }
-
     public boolean isPageOpened() {
         return super.isPageOpened(PAGE_OPENED_IDENTIFIER);
     }
@@ -42,6 +39,5 @@ public class LoginPage extends BasePage {
         getEmailField().sendKeys(ReadProperties.getUsername());
         getPasswordField().sendKeys(ReadProperties.getPassword());
         getLoginButton().click();
-
     }
 }

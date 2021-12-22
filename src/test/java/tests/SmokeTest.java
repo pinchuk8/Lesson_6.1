@@ -9,7 +9,6 @@ import pages.AddProjectPage;
 import pages.DashboadPage;
 import pages.LoginPage;
 
-
 public class SmokeTest extends BaseTest {
     @Test
     public void loginTest() {
@@ -17,7 +16,6 @@ public class SmokeTest extends BaseTest {
         loginPage.getEmailField().sendKeys(ReadProperties.getUsername());
         loginPage.getPasswordField().sendKeys(ReadProperties.getPassword());
         loginPage.getLoginButton().click();
-
     }
 
     @Test
@@ -25,7 +23,7 @@ public class SmokeTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(ReadProperties.getUsername(), ReadProperties.getPassword());
         DashboadPage dashboadPage = new DashboadPage(driver);
-        dashboadPage.add();
+        dashboadPage.getAdd().click();
         AddProjectPage addProjectPage = new AddProjectPage(driver);
         addProjectPage.add_project(ReadProperties.getName(), ReadProperties.getAnnouncement());
 
@@ -34,7 +32,6 @@ public class SmokeTest extends BaseTest {
         if (!checkAddProjectStr.equals("Successfully added the new project.")) {
             System.out.println("Проект не добавлен");
         }
-
 
     }
 }

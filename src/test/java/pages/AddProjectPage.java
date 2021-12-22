@@ -37,13 +37,11 @@ public class AddProjectPage extends BasePage {
         return driver.findElement(Accept_Selector);
     }
 
-
     public void add_project(String name, String announcement) {
         getName().sendKeys(ReadProperties.getName());
         getAnnouncement().sendKeys(ReadProperties.getAnnouncement());
         getSuite_Mode_Single().click();
         getAccept().click();
-
     }
 }
 
