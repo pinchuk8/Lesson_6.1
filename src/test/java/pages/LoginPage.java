@@ -16,6 +16,7 @@ public class LoginPage extends BasePage {
 
     //Конструктор страницы
       public LoginPage (WebDriver driver){
+          super();
           this. driver =driver;
     }
     public boolean isPageOpened(){
@@ -31,8 +32,8 @@ public class LoginPage extends BasePage {
     public WebElement getLoginField(){
         return driver.findElement(loginSelector);
     }
-    //Реализация базовых элементов
+    /*Реализация базовых элементов
     public void login (String username,String password){
           loginPage =
-    }
+    }*/
 }

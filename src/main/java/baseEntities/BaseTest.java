@@ -12,7 +12,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-    public class BaseTest {
+import java.util.concurrent.TimeUnit;
+
+public class BaseTest {
         protected WebDriver driver;
 
         @BeforeMethod
@@ -26,6 +28,8 @@ import org.testng.annotations.BeforeMethod;
                     chromeOptions.setHeadless(ReadProperties.getHeadless());
                     //перенабрать
                     driver=new ChromeDriver(chromeOptions);
+                    driver.manage().timeouts().implicitlyWait(0, TimeUnit.MILLISECONDS);
+                    driver.get(ReadProperties.getUrl());
 
                     break;
                 case "firefox":

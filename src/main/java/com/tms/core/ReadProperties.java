@@ -36,5 +36,9 @@ public class ReadProperties {
         return properties.getProperty("password");
     }
 
+
+    public static int getTimeOut() {
+        return Integer.parseInt(properties.getProperty("timeout"));
+    }
 }
 
