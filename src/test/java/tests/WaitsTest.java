@@ -5,19 +5,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utils.Waits;
 
 public class WaitsTest extends BaseTest {
+
     @Test
-    public void explicitlyWait (){
-        driver.get ("http://the-internet.herokuapp.com/hovers");
+    public void explicitlyWait(){
+        driver.get("http://the-internet.herokuapp.com/hovers");
 
-        Waits waits = new Waits (driver);
-
-        WebElement figure=driver.findElement(By.className("figure"));
+        WebElement figure = driver.findElement(By.className("figure"));
         figure.click();
 
         WebElement caption = driver.findElement(By.xpath("//h5[. = 'name: user1']"));
-        Assert.assertTrue(waits.waitForVisibility(caption));
+        Assert.assertTrue(caption.isDisplayed());
     }
 }

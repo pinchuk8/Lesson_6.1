@@ -1,3 +1,4 @@
+
 package baseEntities;
 
 import org.openqa.selenium.By;
@@ -11,14 +12,11 @@ public class BasePage {
         this.driver = driver;
     }
 
-    public BasePage() {
-
-    }
-
-    public boolean isPageOpen(By by){
-        try{
-        return driver.findElement(by).isDisplayed();
-    }catch (NoSuchElementException nsex){
-        return false;}
+    public boolean isPageOpened(By by){
+        try {
+            return driver.findElement(by).isDisplayed();
+        }catch (NoSuchElementException nsex){
+            return false;
+        }
     }
 }

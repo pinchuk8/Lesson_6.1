@@ -1,4 +1,4 @@
-package pages;
+/*package pages;
 
 import baseEntities.BasePage;
 import org.openqa.selenium.By;
@@ -36,4 +36,4 @@ public class LoginPage extends BasePage {
     public void login (String username,String password){
           loginPage =
     }*/
-}
+

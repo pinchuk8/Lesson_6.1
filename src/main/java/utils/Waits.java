@@ -1,7 +1,8 @@
+
+
 package utils;
 
 import com.tms.core.ReadProperties;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,11 +21,8 @@ public final class Waits {
         this.driver = driver;
         wait = new WebDriverWait(driver, timeOut);
     }
-    public boolean waitForVisibility(WebElement element) {
+
+    public boolean waitForVisibility(WebElement element){
         return wait.until(ExpectedConditions.visibilityOf(element)).isDisplayed();
     }
-    public boolean waitForVisibility(By by) {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(by)).isDisplayed();
-    }
 }
-

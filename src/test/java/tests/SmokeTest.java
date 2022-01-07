@@ -1,4 +1,4 @@
-package tests;
+/*package tests;
 
 import baseEntities.BaseTest;
 import com.tms.core.ReadProperties;
@@ -14,4 +14,4 @@ public class SmokeTest extends BaseTest {
         loginPage.getPasswordField().sendKeys(ReadProperties.getPassword());
 
     }
-}
+}*/
