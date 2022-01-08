@@ -4,10 +4,10 @@ import org.testng.annotations.Test;
 
 public class CalcTest extends BaseTest{
     Calculator cal= new Calculator("CalcTest");
-    //@Test (invocationCount = 3,invocationTimeOut = 1000)
-    @Test (invocationCount = 6,threadPoolSize =3)
+    @Test (invocationCount = 3,invocationTimeOut = 1000)
+    //@Test (invocationCount = 6,threadPoolSize =3)
     public void invocation () throws InterruptedException {
-        Thread.sleep(250);
+        Thread.sleep(300);
         Assert.assertEquals(cal.sum(2,3),5);
     }
 

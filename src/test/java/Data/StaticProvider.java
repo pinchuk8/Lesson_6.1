@@ -12,4 +12,13 @@ public class StaticProvider {
 
         };
     }
+    @DataProvider(name = "dataForSomeMult")
+    public static Object[][] dataForSomeFunction_1() {
+        return new Object[][]{
+                {-2, -3, 6},
+                {0, 0, 0},
+                {2, 3, 6}
+
+        };
+    }
 }
