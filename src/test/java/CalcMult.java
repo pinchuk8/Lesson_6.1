@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 
 public class CalcMult extends BaseTest {
     private Calculator calc = new Calculator("CalcMult");
-    private Object b;
 
     @Test(invocationCount = 6, threadPoolSize = 3)
     public void testMult1() throws InterruptedException {
@@ -17,15 +16,16 @@ public class CalcMult extends BaseTest {
         Assert.assertEquals(calc.mult(a, b), expectedResult);
     }
 
-    @Test(retryAnalyzer = RetryMult.class)
+    int a = 12;
+    int b = 1;
+    int attempt=1;
+    @Test(retryAnalyzer = Retry.class)
     public void testMult3() {
-        int expected = 36;
-        int a = 12;
-        int b = 1;
-        if ((a * b) == expected) {
+        if (calc.mult(a,b)==36) {
             Assert.assertTrue(true);
         } else {
-            System.out.println(b);
+            System.out.println("attempt_"+attempt);
+            attempt++;
             b++;
             throw new NullPointerException();
         }
