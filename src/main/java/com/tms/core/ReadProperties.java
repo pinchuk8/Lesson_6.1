@@ -40,5 +40,6 @@ public class ReadProperties {
     public static int getTimeOut() {
         return Integer.parseInt(properties.getProperty("timeout"));
     }
+    public static String getInput(){return properties.getProperty("input_data");}
 }
 
