@@ -54,17 +54,17 @@ public class xPath {package tests;
 
         //Использование following - Выбирает всё в документе после закрытия тэга текущего узла
         private static String path4_1 = "//div[@class='social']/following::p";
-        private static String path4_2 = "(//label[@for=\"announcement\"]/following::div/*[@class='checkbox'])[1]";
+        private static String path4_2 = "//div[@class='social']/following::link[@rel='stylesheet']";
 
         //Использование following-sibling - Выбирает все узлы одного уровня после текущего узла
-        private static String path5_1 = "//label[@for=\"announcement\"]/following-sibling::div";
+        private static String path5_1 = "//div[@class='social']/following-sibling::div";
 
 
         //Использование preceding - Выбирает все узлы, которые появляются перед текущим узлом в документе
-        private static String path6_1 = "//label[@for=\"announcement\"]/preceding::div";
+        private static String path6_1 = "//div[@class='humburger']/preceding::div[@class='mobile-menu__close']";
 
         //Использование preceding-sibling - Выбирает все узлы одного уровня до текущего узла
-        private static String path7_1 = "//label[@for=\"announcement\"]/preceding-sibling::div";
+        private static String path7_1 = "//div[@class='humburger']/preceding-sibling::a";
 
 
     }

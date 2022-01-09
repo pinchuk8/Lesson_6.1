@@ -3,25 +3,22 @@ package tests;
 import org.openqa.selenium.By;
 
 public class CssSelector {
-    //URL = http://pharmacademy.by/
-
     private void cssSelectors (){
+        //URL=https://www.gurock.com/testrail/
+        By multipleClassSelector1 = By.cssSelector(".yoast-schema-graph.yoast-schema-graph--main"); //поиск по двум классам в элементе*/
+        //URL = http://pharmacademy.by/
         By classSelector1 = By.cssSelector (".menu-container-m"); //(".radio"); //поиск по классу radio
         By classSelector2 = By.className ("menu-container-m"); //("radio"); //поиск по имени класса radio
 
-        /*NOT FOUNDED!
-        By idSelector1 = By.cssSelector("#suite_mode_single"); //поиск по id
-        By idSelector2 = By.id("suite_mode_single"); //поиск по id*/
+        By idSelector1 = By.cssSelector("#log_remember"); //поиск по id
+        By idSelector2 = By.id("log_remember"); //поиск по id*/
 
 
-        By tagSelector1 = By.cssSelector ("body"); //("label"); //поиск по tag
-        By tagSelector2 = By.tagName ("body");//("label"); //поиск по tag
+        By tagSelector1 = By.cssSelector ("label"); //поиск по tag
+        By tagSelector2 = By.tagName ("label"); //поиск по tag
 
         By tagAttributSelector = By.cssSelector ("meta[name='Keywords']");//("label[for='name']"); //поиск по tag & atribut со значением
         By tagAttributSelector1 = By.cssSelector("meta[charset]");//("label[for]"); //поиск по tag и присутствием атрибута
-
-        /*NOT FOUNDED!
-        By multipleClassSelector1 = By.cssSelector(".column.content.overflow-content"); //поиск по двум классам в элементе*/
 
         By simpleHierarchicalSelector1 = By.cssSelector (".content .search-mobile"); //(".table .content-inner"); //поиск простого дочернего элемента
 
