@@ -9,6 +9,7 @@ public class StartPage extends BasePage {
     private By Page_Opened_Identifier = By.className("heading");
     private By InputButton_selector = By.cssSelector("[href='/inputs']");
     private By DropDownButton_selector = By.cssSelector("[href='/dropdown']");
+    private By DisappearingElementButton_selector = By.cssSelector("[href='/disappearing_elements']");
 
 
     public boolean isPageOpened(){return super.isPageOpened (Page_Opened_Identifier);}
@@ -21,6 +22,9 @@ public class StartPage extends BasePage {
     }
     public  WebElement getDropDownButton (){
         return driver.findElement(DropDownButton_selector);
+    }
+    public  WebElement getDisappearingElementButton (){
+        return driver.findElement(DisappearingElementButton_selector);
     }
 
 }
