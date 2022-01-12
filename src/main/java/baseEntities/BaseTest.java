@@ -1,49 +1,31 @@
-package baseEntities;
+package baseEntity;
 
-
-import com.tms.core.ReadProperties;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.config.DriverManagerType;
-import org.apache.hc.core5.http.io.SessionOutputBuffer;
+import core.BrowsersService;
+import core.ReadProperties;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import utils.Listener;
+import utils.Waits;
 
-    public class BaseTest {
-        protected WebDriver driver;
+@Listeners(Listener.class)
+public class BaseTest {
+    protected WebDriver driver;
+    protected BrowsersService browsersService;
+    protected Waits waits;
 
-        @BeforeMethod
-        public void setUp(){
-            switch (ReadProperties.getBrowserType().toLowerCase()){
-                case "chrome":
-                    WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
-                    ChromeOptions chromeOptions= new ChromeOptions();
-                    chromeOptions.addArguments("--disable-gpu");
-                    chromeOptions.addArguments("--silent");
-                    chromeOptions.setHeadless(ReadProperties.getHeadless());
-                    //перенабрать
-                    driver=new ChromeDriver(chromeOptions);
+    @BeforeClass
+    public void openPage() {
+        browsersService = new BrowsersService();
+        driver = browsersService.getDriver();
+        waits = new Waits(driver);
 
-                    break;
-                case "firefox":
-                    WebDriverManager.getInstance(DriverManagerType.FIREFOX).setup();
-
-                    driver = new FirefoxDriver();
-                    break;
-                default:
-                    System.out.println("данный браузер не поддерживается");
-                    break;
-            }
-            driver.manage().window().maximize();
-            driver.get(ReadProperties.getUrl());
-
-        }
-
-        @AfterMethod
-        public void tearDown(){
-            driver.quit();
-        }
+        driver.get(ReadProperties.getUrl());
     }
+
+    @AfterClass
+    public void closePage() {
+        driver.quit();
+    }
+}
