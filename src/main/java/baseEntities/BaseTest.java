@@ -1,4 +1,4 @@
-package baseEntity;
+package baseEntities;
 
 import core.BrowsersService;
 import core.ReadProperties;
