@@ -2,6 +2,7 @@ package tests;
 
 import baseEntities.BaseTest;
 import core.ReadProperties;
+import models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DashBoardPage;
@@ -12,16 +13,15 @@ public class SmokeTest extends BaseTest {
 
     @Test
     public void loginTest() {
-        LoginPage loginPage = new LoginPage(driver);
+        User user = new User()
+                .setEmail(ReadProperties.getUsername())
+                .setPassword(ReadProperties.getPassword());
 
-        loginPage.getEmailField().sendKeys(ReadProperties.getUsername());
-        loginPage.getPasswordField().sendKeys(ReadProperties.getPassword());
-        loginPage.getLoginButton().click();
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login(user);
 
         DashBoardPage dashboardPage = new DashBoardPage(driver);
-        waits.waitForVisibility(dashboardPage.getAddProjectButton());
-
-       Assert.assertTrue(dashboardPage.isPageOpened());
+        Assert.assertTrue(dashboardPage.getAddProjectButton().isDisplayed());
     }
 
     @Test(retryAnalyzer = Retry.class)
