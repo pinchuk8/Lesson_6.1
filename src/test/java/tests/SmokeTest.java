@@ -21,7 +21,7 @@ public class SmokeTest extends BaseTest {
         DashBoardPage dashboardPage = new DashBoardPage(driver);
         waits.waitForVisibility(dashboardPage.getAddProjectButton());
 
-        Assert.assertTrue(dashboardPage.isPageOpened());
+       Assert.assertTrue(dashboardPage.isPageOpened());
     }
 
     @Test(retryAnalyzer = Retry.class)

@@ -8,12 +8,15 @@ import org.openqa.selenium.WebElement;
 public class DashBoardPage extends BasePage {
     private static String ENDPOINT = "/dashboard";
 
-    protected static By PAGE_OPENED_IDENTIFIER = By.id("activityChart");
+    private static final By PAGE_OPENED_IDENTIFIER = By.id("activityChart");
 
-    protected static By addProjectButtonSelector = By.id("sidebar-projects-add");
+    protected  By addProjectButtonSelector = By.id("sidebar-projects-add");
 
     public DashBoardPage(WebDriver driver) {
         super(driver);
+    }
+    public DashBoardPage(WebDriver driver,boolean openPageByUrl){
+        super(driver,openPageByUrl);
     }
 
     @Override
@@ -21,8 +24,9 @@ public class DashBoardPage extends BasePage {
         driver.get(BASE_URL + ENDPOINT);
     }
 
+    @Override
     public boolean isPageOpened() {
-        return super.isPageOpened(PAGE_OPENED_IDENTIFIER);
+        return waits.waitForVisibility(PAGE_OPENED_IDENTIFIER).isDisplayed();
     }
 
     public WebElement getAddProjectButton() {
