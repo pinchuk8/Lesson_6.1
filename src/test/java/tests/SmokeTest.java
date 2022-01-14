@@ -12,12 +12,7 @@ public class SmokeTest extends BaseTest {
 
     @Test
     public void loginTest() {
-        LoginPage loginPage = new LoginPage(driver) {
-            @Override
-            protected void openPage() {
-
-            }
-        };
+        LoginPage loginPage = new LoginPage(driver);
 
         loginPage.getEmailField().sendKeys(ReadProperties.getUsername());
         loginPage.getPasswordField().sendKeys(ReadProperties.getPassword());
@@ -31,12 +26,7 @@ public class SmokeTest extends BaseTest {
 
     @Test(retryAnalyzer = Retry.class)
     public void flakyLoginTest() {
-        LoginPage loginPage = new LoginPage(driver) {
-            @Override
-            protected void openPage() {
-
-            }
-        };
+        LoginPage loginPage = new LoginPage(driver);
 
         loginPage.getEmailField().sendKeys(ReadProperties.getUsername());
         loginPage.getPasswordField().sendKeys(ReadProperties.getPassword());
@@ -48,4 +38,3 @@ public class SmokeTest extends BaseTest {
         Assert.assertTrue(dashboardPage.isPageOpened());
     }
 }
-

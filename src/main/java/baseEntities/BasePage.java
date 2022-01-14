@@ -28,11 +28,7 @@ public abstract class BasePage {
     protected abstract void openPage();
 
     public boolean isPageOpened(By by) {
-        try {
             return waits.waitForVisibility(by).isDisplayed();
-        } catch (Exception exception) {
-            exception.printStackTrace();
-            return false;
-        }
+
     }
 }
