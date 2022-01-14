@@ -1,4 +1,3 @@
-
 package pages;
 
 import baseEntities.BasePage;
@@ -30,3 +29,4 @@ public class DashBoardPage extends BasePage {
         return driver.findElement(addProjectButtonSelector);
     }
 }
+

@@ -1,6 +1,5 @@
 package baseEntities;
 
-
 import core.ReadProperties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,8 +7,8 @@ import utils.Waits;
 
 public abstract class BasePage {
     protected WebDriver driver;
-    protected Waits waits;
     protected String BASE_URL;
+    protected Waits waits;
 
     public BasePage(WebDriver driver) {
         this(driver, false);
@@ -28,7 +27,6 @@ public abstract class BasePage {
     protected abstract void openPage();
 
     public boolean isPageOpened(By by) {
-            return waits.waitForVisibility(by).isDisplayed();
-
+        return waits.waitForVisibility(by).isDisplayed();
     }
 }

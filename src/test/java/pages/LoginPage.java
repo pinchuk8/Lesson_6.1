@@ -1,14 +1,12 @@
 package pages;
-
 import baseEntities.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
-    public static String ENDPOINT = "/auth/login";
     protected By PAGE_OPENED_IDENTIFIER = By.id("button_primary");
-
+    private static String ENDPOINT= "/auth/login";
     protected By emailSelector = By.id("name");
     protected By passwordSelector = By.id("password");
     protected By loginSelector = By.id("button_primary");
@@ -18,9 +16,10 @@ public class LoginPage extends BasePage {
     }
 
     @Override
-    protected void openPage (){
-        driver.get(BASE_URL+ENDPOINT);
+    protected void openPage() {
+        driver.get(BASE_URL + ENDPOINT);
     }
+
     public boolean isPageOpened() {
         return !super.isPageOpened(PAGE_OPENED_IDENTIFIER);
     }
@@ -37,3 +36,4 @@ public class LoginPage extends BasePage {
         return driver.findElement(loginSelector);
     }
 }
+

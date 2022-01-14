@@ -40,4 +40,3 @@ public class ReadProperties {
         return Integer.parseInt(properties.getProperty("timeout"));
     }
 }
-
