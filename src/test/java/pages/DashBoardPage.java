@@ -1,6 +1,7 @@
 package pages;
 
 import baseEntities.BasePage;
+import models.Project;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,5 +33,6 @@ public class DashBoardPage extends BasePage {
     public WebElement getAddProjectButton() {
         return driver.findElement(addProjectButtonSelector);
     }
+
 }
 
