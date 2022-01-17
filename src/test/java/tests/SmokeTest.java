@@ -1,14 +1,14 @@
 package tests;
 
 import baseEntities.BaseTest;
+import core.BrowsersService;
 import core.ReadProperties;
-import models.Project;
+import models.Pr;
+//import models.Project;
 import models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.AddProjectPage;
-import pages.DashBoardPage;
-import pages.LoginPage;
+import pages.*;
 import utils.Retry;
 
 public class SmokeTest extends BaseTest {
@@ -26,19 +26,34 @@ public class SmokeTest extends BaseTest {
         Assert.assertTrue(dashboardPage.getAddProjectButton().isDisplayed());
     }
     @Test
-    public void addProject(){
+    public void addPr(){
         User user = new User()
                 .setEmail(ReadProperties.getUsername())
                 .setPassword(ReadProperties.getPassword());
-
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(user);
         DashBoardPage dashBoardPage=new DashBoardPage(driver);
         dashBoardPage.getAddProjectButton().click();
-        Project project=new Project();
-        project.chooseProjectType();
+        Pr pr=new Pr()
+                .setProject_name(ReadProperties.getProject_name())
+                .setAnnouncement(ReadProperties.getAnnouncement());
         AddProjectPage addProjectPage=new AddProjectPage(driver);
-        addProjectPage.addProject(project);
+        addProjectPage.addPr(pr);
+        ProjectsPage projectsPage=new ProjectsPage(driver);
+        projectsPage.getProjectSearch();
+        Assert.assertTrue(projectsPage.getProjectSearch().isDisplayed());
+    }
+    @Test
+    public void UpdateProject(){
+        User user = new User()
+                .setEmail(ReadProperties.getUsername())
+                .setPassword(ReadProperties.getPassword());
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login(user);
+        ProjectsPage projectsPage=new ProjectsPage(driver);
+        projectsPage.getEditButton();
+        EditProjectPage editProjectPage=new EditProjectPage(driver);
+        editProjectPage.Edit();
 
     }
 

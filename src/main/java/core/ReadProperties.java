@@ -1,5 +1,7 @@
 package core;
 
+import org.openqa.selenium.By;
+
 import java.io.IOException;
 import java.sql.Struct;
 import java.util.Properties;
@@ -41,9 +43,11 @@ public class ReadProperties {
         return Integer.parseInt(properties.getProperty("timeout"));
     }
 
+
+    public static String getProject_name(){return properties.getProperty("project_name1");}
+    public static String getAnnouncement(){return properties.getProperty("announcement1");}
     public static String getProject_name1(){return properties.getProperty("project_name1");}
     public static String getAnnouncement1(){return properties.getProperty("announcement1");}
-
     public static String getProject_name2(){return properties.getProperty("project_name2");}
     public static String getAnnouncement2(){return properties.getProperty("announcement2");}
     public static String getProject_name3(){return properties.getProperty("project_name3");}

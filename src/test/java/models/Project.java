@@ -1,4 +1,4 @@
-package models;
+/*package models;
 
 import core.ReadProperties;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -74,6 +74,7 @@ public class Project {
         Random random=new Random();
         int number = random.nextInt(diff+1)+min;
     }
+
     public void chooseProjectType(){
         int min=1;
         int max=3;
@@ -107,3 +108,4 @@ public class Project {
         }
     }
 
+*/
