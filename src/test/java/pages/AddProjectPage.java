@@ -18,9 +18,10 @@ public class AddProjectPage extends BasePage {
     protected  By NameField_Selector = By.id("name");
     protected  By AnnouncementField_Selector = By.id("announcement");
     protected  By AddButton_Selector = By.id("accept");
-    protected By type1 = By.id("suite_mode_single");
+   /* protected By type1 = By.id("suite_mode_single");
     protected By type2 = By.id("suite_mode_single_baseline");
-    protected By type3 = By.id("suite_mode_multi");
+    protected By type3 = By.id("suite_mode_multi");*/
+    private static String
 
     public AddProjectPage(WebDriver driver) {
         super(driver);

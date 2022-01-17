@@ -14,10 +14,12 @@ import java.util.Random;
 public class Project {
     private String project_name;
     private String announcement;
-    protected By type1 = By.id("suite_mode_single");
+    //private int type1 = By.id("suite_mode_single");
     protected By type2 = By.id("suite_mode_single_baseline");
     protected By type3 = By.id("suite_mode_multi");
-
+    private boolean isShowAnn;
+    private boolean isCompleted;
+переделать конструкторы, гетеры и сетеры
 
 
     public Project(String project_name, String announcement) {

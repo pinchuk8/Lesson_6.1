@@ -10,10 +10,15 @@ import models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
+import utils.Randomization;
 import utils.Retry;
 
 public class SmokeTest extends BaseTest {
-
+    Project addProject;
+private void setupProject(){
+addProject = new Project();
+addProject.setProject_name(Randomization.ge)//дописать....
+}
     @Test
     public void loginTest() {
         User user = new User()
