@@ -1,9 +1,10 @@
-/*package models;
+package models;
 
 import core.ReadProperties;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.config.DriverManagerType;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -48,6 +49,7 @@ public class Project {
         return type1;
     }
 
+
     public void setType1(By type1) {
         this.type1 = type1;
     }
@@ -66,46 +68,5 @@ public class Project {
 
     public void setType3(By type3) {
         this.type3 = type3;
-    }
-    public static void Number (String[]args){
-        int min=1;
-        int max=3;
-        int diff=max-min;
-        Random random=new Random();
-        int number = random.nextInt(diff+1)+min;
-    }
-
-    public void chooseProjectType(){
-        int min=1;
-        int max=3;
-        int diff=max-min;
-        Random random=new Random();
-        int number = random.nextInt(diff+1)+min;
-            switch (number) {
-                case  1:
-                    Project project1=new Project();
-                    setProject_name(ReadProperties.getProject_name1());
-                    setAnnouncement(ReadProperties.getAnnouncement2());
-                    setType1(type1);
-                    break;
-                case 2:
-                    Project project2=new Project();
-                    setProject_name(ReadProperties.getProject_name2());
-                    setAnnouncement(ReadProperties.getAnnouncement2());
-                    setType2(type2);
-                    break;
-                case 3:
-                    Project project3=new Project();
-                    setProject_name(ReadProperties.getProject_name3());
-                    setAnnouncement(ReadProperties.getAnnouncement3());
-                    setType3(type3);
-                    break;
-
-                    default:
-                    System.out.println("Проект не создан");
-                    break;
             }
         }
-    }
-
-*/

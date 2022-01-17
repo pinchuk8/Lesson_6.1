@@ -5,6 +5,7 @@ import core.BrowsersService;
 import core.ReadProperties;
 import models.Pr;
 //import models.Project;
+import models.Project;
 import models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -18,7 +19,6 @@ public class SmokeTest extends BaseTest {
         User user = new User()
                 .setEmail(ReadProperties.getUsername())
                 .setPassword(ReadProperties.getPassword());
-
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(user);
 
@@ -39,6 +39,24 @@ public class SmokeTest extends BaseTest {
                 .setAnnouncement(ReadProperties.getAnnouncement());
         AddProjectPage addProjectPage=new AddProjectPage(driver);
         addProjectPage.addPr(pr);
+        ProjectsPage projectsPage=new ProjectsPage(driver);
+        projectsPage.getProjectSearch();
+        Assert.assertTrue(projectsPage.getProjectSearch().isDisplayed());
+    }
+    @Test
+    public void addProject(){
+        User user = new User()
+                .setEmail(ReadProperties.getUsername())
+                .setPassword(ReadProperties.getPassword());
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login(user);
+        DashBoardPage dashBoardPage=new DashBoardPage(driver);
+        dashBoardPage.getAddProjectButton().click();
+        Project project=new Project()
+                .setProject_name(ReadProperties.getProject_name())
+                .setAnnouncement(ReadProperties.getAnnouncement());
+        AddProjectPage addProjectPage=new AddProjectPage(driver);
+        addProjectPage.addProject(project);
         ProjectsPage projectsPage=new ProjectsPage(driver);
         projectsPage.getProjectSearch();
         Assert.assertTrue(projectsPage.getProjectSearch().isDisplayed());
