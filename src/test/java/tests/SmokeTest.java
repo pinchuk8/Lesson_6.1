@@ -6,6 +6,7 @@ import core.ReadProperties;
 import emum.ProjectType;
 import models.Project;
 import models.User;
+import models.UserBuilder;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
@@ -33,6 +34,18 @@ public class SmokeTest extends BaseTest {
                 .setPassword(ReadProperties.getPassword());
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(user);
+
+        DashBoardPage dashboardPage = new DashBoardPage(driver);
+        Assert.assertTrue(dashboardPage.getAddProjectButton().isDisplayed());
+    }
+    @Test
+    public void loginTestWithBuilder() {
+        UserBuilder user = new UserBuilder.Builder()
+                .withEmail(ReadProperties.getUsername())
+                .withPassword(ReadProperties.getPassword())
+                .build();
+        LoginPage loginPage = new LoginPage(driver);
+        //loginPage.login(user); т.к логинпэйдж реализует юзера а не юзербилдер в методе логин
 
         DashBoardPage dashboardPage = new DashBoardPage(driver);
         Assert.assertTrue(dashboardPage.getAddProjectButton().isDisplayed());
