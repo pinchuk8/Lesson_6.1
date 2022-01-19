@@ -1,10 +1,9 @@
 package tests;
 
 import baseEntities.BaseTest;
-import core.BrowsersService;
 import core.ReadProperties;
-import models.Pr;
-//import models.Project;
+
+import emum.ProjectType;
 import models.Project;
 import models.User;
 import org.testng.Assert;
@@ -15,10 +14,18 @@ import utils.Retry;
 
 public class SmokeTest extends BaseTest {
     Project addProject;
-private void setupProject(){
-addProject = new Project();
-addProject.setProject_name(Randomization.ge)//дописать....
-}
+    Project updateProject;
+
+    private void setupProjects() {
+        addProject = new Project();
+        addProject.setName(Randomization.getRandomString(8));
+        addProject.setTypeOfProject(Randomization.getRandomType());
+
+        updateProject = new Project();
+        updateProject.setName(Randomization.getRandomString(8));
+        updateProject.setTypeOfProject(Randomization.getRandomType());
+    }
+
     @Test
     public void loginTest() {
         User user = new User()
@@ -30,25 +37,8 @@ addProject.setProject_name(Randomization.ge)//дописать....
         DashBoardPage dashboardPage = new DashBoardPage(driver);
         Assert.assertTrue(dashboardPage.getAddProjectButton().isDisplayed());
     }
-    @Test
-    public void addPr(){
-        User user = new User()
-                .setEmail(ReadProperties.getUsername())
-                .setPassword(ReadProperties.getPassword());
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.login(user);
-        DashBoardPage dashBoardPage=new DashBoardPage(driver);
-        dashBoardPage.getAddProjectButton().click();
-        Pr pr=new Pr()
-                .setProject_name(ReadProperties.getProject_name())
-                .setAnnouncement(ReadProperties.getAnnouncement());
-        AddProjectPage addProjectPage=new AddProjectPage(driver);
-        addProjectPage.addPr(pr);
-        ProjectsPage projectsPage=new ProjectsPage(driver);
-        projectsPage.getProjectSearch();
-        Assert.assertTrue(projectsPage.getProjectSearch().isDisplayed());
-    }
-    @Test
+
+    /*@Test
     public void addProject(){
         User user = new User()
                 .setEmail(ReadProperties.getUsername())
@@ -65,17 +55,17 @@ addProject.setProject_name(Randomization.ge)//дописать....
         ProjectsPage projectsPage=new ProjectsPage(driver);
         projectsPage.getProjectSearch();
         Assert.assertTrue(projectsPage.getProjectSearch().isDisplayed());
-    }
+    }*/
     @Test
-    public void UpdateProject(){
+    public void UpdateProject() {
         User user = new User()
                 .setEmail(ReadProperties.getUsername())
                 .setPassword(ReadProperties.getPassword());
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(user);
-        ProjectsPage projectsPage=new ProjectsPage(driver);
+        ProjectsPage projectsPage = new ProjectsPage(driver);
         projectsPage.getEditButton();
-        EditProjectPage editProjectPage=new EditProjectPage(driver);
+        EditProjectPage editProjectPage = new EditProjectPage(driver);
         editProjectPage.Edit();
 
     }

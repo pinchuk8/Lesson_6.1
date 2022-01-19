@@ -1,23 +1,55 @@
 package models;
 
-import core.ReadProperties;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.config.DriverManagerType;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
-import java.util.Random;
+import emum.ProjectType;
 
 public class Project {
-    private String name;
-    private String announcement;
-    private int typeOfProject;
-    private boolean isShowAnnouncement;
-    private boolean isCompleted;
+        private String name;
+        private String announcement;
+        private boolean isShowAnnouncement;
+        private ProjectType typeOfProject;
+        private boolean isCompleted;
 
 
+        public Project() {
+        }
 
+        public String getName() {
+            return name;
+        }
 
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getAnnouncement() {
+            return announcement;
+        }
+
+        public void setAnnouncement(String announcement) {
+            this.announcement = announcement;
+        }
+
+        public ProjectType getTypeOfProject() {
+            return typeOfProject;
+        }
+
+        public void setTypeOfProject(ProjectType typeOfProject) {
+            this.typeOfProject = typeOfProject;
+        }
+
+        public boolean isShowAnnouncement() {
+            return isShowAnnouncement;
+        }
+
+        public void setShowAnnouncement(boolean showAnnouncement) {
+            isShowAnnouncement = showAnnouncement;
+        }
+
+        public boolean isCompleted() {
+            return isCompleted;
+        }
+
+        public void setCompleted(boolean completed) {
+            isCompleted = completed;
+        }
+    }
