@@ -22,6 +22,7 @@ import static org.hamcrest.Matchers.is;
 public class TestRailApiTest2 extends BaseApiTest {
     @Test
     public void getAllUsers() {
+        //пользователь с ожидаемыми результатами
         User user = User.builder()
                 .name("Alex Tros")
                 .email("atrostyanko+0401@gmail.com")
@@ -35,7 +36,7 @@ public class TestRailApiTest2 extends BaseApiTest {
                 .get(Endpoints.GET_ALL_USERS)
                 .then()
                 .log().body()
-                .body("get(0).name",is(user.getName()))
+                .body("get(0).name",is(user.getName()))//первый объект из массива который придёт в json
                 .body("get(0).email",equalTo(user.getEmail()))
                 .statusCode(HttpStatus.SC_OK);
     }
@@ -53,11 +54,12 @@ public class TestRailApiTest2 extends BaseApiTest {
         User actualUser=given()
                 .pathParam("id",userID)
                 .get(Endpoints.GET_USER)
+                //.when () можно убрать, если в этом блоке ничего не задаём
                 .then()
-                .assertThat()
+                .assertThat()//секция проверок
                 .statusCode(HttpStatus.SC_OK)
                 .extract()
-                .as(User.class);
+                .as(User.class);//десереализация json в объект
         Assert.assertEquals(actualUser,expectedUser);
     }
     @Test
@@ -75,7 +77,7 @@ public class TestRailApiTest2 extends BaseApiTest {
         Response response =given()
                 .pathParam("id",userID)
                 .get(Endpoints.GET_USER);
-
+//десереализация json в объект
         User actualUser =gson.fromJson(response.getBody().asString(), User.class);
         Assert.assertEquals(actualUser,expectedUser);
     }
@@ -109,7 +111,7 @@ public class TestRailApiTest2 extends BaseApiTest {
 
         Response response =given()
                 .get(Endpoints.GET_ALL_USERS);
-
+        //создаём специальный тип, в котором указываем что мы хотим
         Type listType = new TypeToken<ArrayList<User>>(){}.getType();
         List<User> actualUsersList = gson.fromJson(response.getBody().asString(),listType);
         Assert.assertEquals(actualUsersList.get(0),expectedUser);

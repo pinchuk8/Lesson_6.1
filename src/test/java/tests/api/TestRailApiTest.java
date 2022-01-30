@@ -50,10 +50,10 @@ public class TestRailApiTest extends BaseApiTest {
 
         given()
                 .when()
-                .get(endpoint)
-                .then()
-                .log().status()
-                .log().body()
-                .statusCode(HttpStatus.SC_OK);
+                .get(endpoint)//отправляем запрос на endpoint
+                .then()//затем
+                .log().status()//вывод  на экран status code в отформатированном виде
+                .log().body()//вывод на экран отформатированного body
+                .statusCode(HttpStatus.SC_OK);//проверяем равен ли статус 200
     }
 }

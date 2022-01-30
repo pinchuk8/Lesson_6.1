@@ -129,7 +129,7 @@ public class TestRailApiTest1 extends BaseApiTest {
                 .build();
 
         Response response = given()
-                .pathParam("project_id", projectID)
+                .pathParam("project_id", projectID)// заменяем в endpoint
                 .body(projectUpd, ObjectMapperType.GSON)
                 .when()
                 .post(endpoint)
