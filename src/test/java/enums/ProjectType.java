@@ -1,4 +1,4 @@
-package emum;
+package enums;
 
 public final class ProjectType {
 

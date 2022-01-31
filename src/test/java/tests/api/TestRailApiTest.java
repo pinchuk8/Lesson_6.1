@@ -1,6 +1,6 @@
 package tests.api;
 
-import baseEntities.BaseApiTest;
+import baseEntity.BaseApiTest;
 import core.ReadProperties;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -22,11 +22,11 @@ public class TestRailApiTest extends BaseApiTest {
         RestAssured.baseURI = ReadProperties.getUrl();
 
         // Setup endpoint
-        String endpoint = "/index.php?/api/v2/get_users";
+        String endpoint = "/index.php?/tests.api.api/v2/get_users";
 
         // Setup request Object
         RequestSpecification httpRequest = given();
-        httpRequest.header(HTTP.CONTENT_TYPE, ContentType.JSON);//информация из документации, которая говорит о формате данных, которые  мы отправляем
+        httpRequest.header(HTTP.CONTENT_TYPE, ContentType.JSON);
         httpRequest.auth().preemptive().basic(ReadProperties.getUsername(), ReadProperties.getPassword());
 
         // Setup Response Object
@@ -46,7 +46,7 @@ public class TestRailApiTest extends BaseApiTest {
     @Test
     public void getAllUsers1() {
         // Setup endpoint
-        String endpoint = "/index.php?/api/v2/get_users";
+        String endpoint = "/index.php?/tests.api.api/v2/get_users";
 
         given()
                 .when()
@@ -57,3 +57,4 @@ public class TestRailApiTest extends BaseApiTest {
                 .statusCode(HttpStatus.SC_OK);
     }
 }
+

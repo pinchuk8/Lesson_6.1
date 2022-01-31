@@ -1,6 +1,6 @@
 package utils;
 
-import baseEntities.BaseTest;
+import baseEntity.BaseTest;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -9,6 +9,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 public class Listener implements ITestListener {
+
     @Override
     public void onTestFailure(ITestResult tr) {
         Object currentClass = tr.getInstance();
@@ -20,6 +21,7 @@ public class Listener implements ITestListener {
 
         }
     }
+
     @Attachment(value = "Page screenshot", type = "image/png")
     private byte[] saveScreenshot(byte[] screenshot) {
         return screenshot;

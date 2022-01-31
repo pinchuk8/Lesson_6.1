@@ -1,7 +1,7 @@
-package baseEntities;
+package baseEntity;
 
-import org.openqa.selenium.WebDriver;
-import utils.Waits;
+        import org.openqa.selenium.WebDriver;
+        import utils.Waits;
 
 public class BaseStep {
     protected WebDriver driver;

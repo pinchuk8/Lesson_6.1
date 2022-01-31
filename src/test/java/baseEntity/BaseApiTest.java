@@ -1,15 +1,12 @@
-package baseEntities;
+package baseEntity;
 
-import core.ReadProperties;
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
-import io.restassured.specification.RequestSpecification;
-import org.apache.http.protocol.HTTP;
-import org.testng.annotations.BeforeTest;
+        import core.ReadProperties;
+        import io.restassured.RestAssured;
+        import io.restassured.http.ContentType;
+        import org.apache.http.protocol.HTTP;
+        import org.testng.annotations.BeforeTest;
 
-import javax.naming.spi.ResolveResult;
-
-import static io.restassured.RestAssured.given;
+        import static io.restassured.RestAssured.given;
 
 public class BaseApiTest {
 

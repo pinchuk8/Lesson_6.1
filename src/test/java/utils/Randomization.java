@@ -28,3 +28,4 @@ public class Randomization {
         return gerRandomInt(2) + 1;
     }
 }
+
