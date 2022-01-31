@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DashBoardPage;
 import pages.LoginPage;
+import steps.ProjectSteps;
 import utils.Randomization;
 import utils.Retry;
 
@@ -53,5 +54,12 @@ public class SmokeTest extends BaseTest {
         updateProject = new Project();
         updateProject.setName(Randomization.getRandomString(8));
         updateProject.setTypeOfProject(Randomization.getRandomType());
+    }
+    @Test
+    public void stepTest(){
+        setupProjects();
+        ProjectSteps projectSteps=new ProjectSteps(driver);
+        projectSteps.addProject(addProject);
+        Assert.assertTrue(true);
     }
 }
