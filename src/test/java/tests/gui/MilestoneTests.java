@@ -1,4 +1,4 @@
-package tests.gui;
+/*package tests.gui;
 
 import baseEntities.BaseTest;
 import models.Milestone;
@@ -22,4 +22,4 @@ public class MilestoneTests extends BaseTest {
         projectSteps.addProject(project);
         milestoneSteps.createMilestone(project, milestone);
     }
-}
+}*/
