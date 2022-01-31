@@ -1,6 +1,7 @@
 package elements;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import utils.Waits;
 
 import java.util.ArrayList;
@@ -59,7 +60,7 @@ public class UIElement implements WebElement {
 
     @Override
     public String getAttribute(String s) {
-        return webElement.getAttribute();
+        return webElement.getAttribute(s);
     }
 
     @Override
@@ -122,5 +123,11 @@ public class UIElement implements WebElement {
     @Override
     public <X> X getScreenshotAs(OutputType<X> outputType) throws WebDriverException {
         return webElement.getScreenshotAs(outputType);
+    }
+    public void DoubleClick(){
+        new Actions(driver)
+                .doubleClick(webElement)
+                .build()
+                .perform();
     }
 }
