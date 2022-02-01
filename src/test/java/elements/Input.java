@@ -7,15 +7,19 @@ import org.openqa.selenium.WebElement;
 
 public class Input {
     private UIElement uiElement;
-    public Input(WebDriver driver, By by){
-        this.uiElement=new UIElement(driver,by);
+
+    public Input(WebDriver driver, By by) {
+        this.uiElement = new UIElement(driver, by);
     }
-    public Input(WebDriver driver, WebElement webElement){
-        this.uiElement=new UIElement(driver,webElement);
+
+    public Input(WebDriver driver, WebElement webElement) {
+        this.uiElement = new UIElement(driver, webElement);
     }
-    public void click(){
+
+    public void click() {
         uiElement.click();
     }
+
     public void sendKeys(CharSequence... charSequences) {
         uiElement.sendKeys(charSequences);
     }

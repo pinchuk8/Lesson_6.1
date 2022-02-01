@@ -24,14 +24,16 @@ public class Table {
     }
     public void getRow(String text){
     }
+    //выдаст колонку по номеру
     public void getColumn(int i){
     }
+    //выдаст колонку по названию
     public void getColumn(String header){
     }
-    public UIElement getCell(int columnNumber, int rowNumber){
-       TableRow row= getRow(rowNumber);
-       ArrayList<UIElement>list =row.findUIElements(By.tagName("td"));
-       return list.get(columnNumber);
+    public UIElement getCell(int columnNumber, int rowNumber){//передаём номер строки и стролбца
+       TableRow row= getRow(rowNumber); //получаем объект (строку) согласно номера
+       ArrayList<UIElement>list =row.findUIElements(By.tagName("td"));//ищем в строке элементы (ячейки)
+       return list.get(columnNumber);//возвращаем из массвива ячеек ту, которая соответствует номеру колонки
     }
     public UIElement getUiElementFromCell(UIElement cellElement, By by){
         return  cellElement.findElement(by);

@@ -19,13 +19,13 @@ public class UIElement implements WebElement {
         this.webElement = driver.findElement(by);
         this.waits = new Waits(driver);
     }
-
+    //на случай если элемент уже есть
     public UIElement(WebDriver driver, WebElement webElement) {
         this.driver = driver;
         this.webElement = webElement;
         this.waits = new Waits(driver);
     }
-
+    //обработка ситуации если элемент не в видимой зоне
     @Override
     public void click() {
         try {
