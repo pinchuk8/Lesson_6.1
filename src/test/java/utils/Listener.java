@@ -22,6 +22,7 @@ public class Listener implements ITestListener {
         }
     }
 
+
     @Attachment(value = "Page screenshot", type = "image/png")
     private byte[] saveScreenshot(byte[] screenshot) {
         return screenshot;
