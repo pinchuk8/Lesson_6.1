@@ -6,10 +6,10 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import com.codeborne.selenide.testng.SoftAsserts;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import pages.LoginPage;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -20,21 +20,22 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;//импорт сразу всех команд
 
-@Listeners({ SoftAsserts.class})
+@Listeners({SoftAsserts.class})
 public class SelenideTests {
     String url = "https://qa1505.testrail.io";
     String username = "atrostyanko+0401@gmail.com";
     String password = "QqtRK9elseEfAk6ilYcJ";
-            @BeforeSuite
-        static void setupAllureReports() {
-            SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-            // or for fine-tuning:
-            SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
-                    .screenshots(true)//выполнит скрин при падении проверки
-                    .savePageSource(true)
-            );
-        }
+    @BeforeSuite
+    static void setupAllureReports() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+
+        // or for fine-tuning:
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
+                .screenshots(true)//выполнит скрин при падении проверки
+                .savePageSource(true)
+        );
+    }
 
     @Test
     public void userCanLogin() {
@@ -68,8 +69,9 @@ public class SelenideTests {
         $("#announcement")
                 .should(exist)
                 .shouldBe(visible);
-                //.shouldHave(exactText("This is the description for the project1"));
+        //.shouldHave(exactText("This is the description for the project1"));
     }
+
     @Test
     public void test1() {
         // Настройка slf4j
@@ -104,6 +106,7 @@ public class SelenideTests {
                         )
                 );
     }
+
     @Test
     public void test2() throws FileNotFoundException {
         // Настройка slf4j
@@ -146,6 +149,7 @@ public class SelenideTests {
 
         sleep(3000);
     }
+
     @Test
     public void userCanLogin1() {
         // Настройка slf4j
