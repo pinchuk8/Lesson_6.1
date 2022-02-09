@@ -1,0 +1,193 @@
+[1644153984.205][INFO]: Starting ChromeDriver 97.0.4692.71 (adefa7837d02a07a604c1e6eff0b3a09422ab88d-refs/branch-heads/4692@{#1247}) on port 46249
+[1644153984.205][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1644153984.386][INFO]: [e82a641835fc6ef94b8846da7933f230] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage" ],
+            "excludeSwitches": [ "enable-automation", "load-extension" ],
+            "extensions": [  ],
+            "prefs": {
+               "credentials_enable_service": false,
+               "download.default_directory": "C:\\Users\\user\\IdeaProjects\\Lesson_6.1\\build\\downloads\\1644153983842_5608_1",
+               "plugins.always_open_pdf_externally": true
+            }
+         },
+         "pageLoadStrategy": "normal"
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "acceptSslCerts": true,
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage" ],
+         "excludeSwitches": [ "enable-automation", "load-extension" ],
+         "extensions": [  ],
+         "prefs": {
+            "credentials_enable_service": false,
+            "download.default_directory": "C:\\Users\\user\\IdeaProjects\\Lesson_6.1\\build\\downloads\\1644153983842_5608_1",
+            "plugins.always_open_pdf_externally": true
+         }
+      },
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "pageLoadStrategy": "normal",
+      "takesScreenshot": true
+   }
+}
+[1644153984.389][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "credentials_enable_service": false,
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "download": {
+      "default_directory": "C:\\Users\\user\\IdeaProjects\\Lesson_6.1\\build\\downloads\\1644153983842_5608_1"
+   },
+   "plugins": {
+      "always_open_pdf_externally": true
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1644153984.389][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1644153984.391][INFO]: Launching chrome: "C:\Program Files\Google\Chrome\Application\chrome.exe" --allow-pre-commit-input --disable-background-networking --disable-backgrounding-occluded-windows --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-blink-features=ShadowDOMV0 --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --no-service-autorun --password-store=basic --proxy-bypass-list=<-loopback> --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\user\AppData\Local\Temp\scoped_dir7880_1501953478" data:,
+[1644153984.835][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1644153984.837][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1644153984.842][INFO]: [e82a641835fc6ef94b8846da7933f230] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "97.0.4692.99",
+      "chrome": {
+         "chromedriverVersion": "97.0.4692.71 (adefa7837d02a07a604c1e6eff0b3a09422ab88d-refs/branch-heads/4692@{#1247})",
+         "userDataDir": "C:\\Users\\user\\AppData\\Local\\Temp\\scoped_dir7880_1501953478"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:55381"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:extension:credBlob": true,
+      "webauthn:extension:largeBlob": true,
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "e82a641835fc6ef94b8846da7933f230"
+}
+[1644153984.883][INFO]: [e82a641835fc6ef94b8846da7933f230] COMMAND SetWindowRect {
+   "height": 768,
+   "width": 1366
+}
+[1644153984.883][INFO]: Waiting for pending navigations...
+[1644153984.884][INFO]: Done waiting for pending navigations. Status: ok
+[1644153985.000][INFO]: Waiting for pending navigations...
+[1644153985.001][INFO]: Done waiting for pending navigations. Status: ok
+[1644153985.001][INFO]: [e82a641835fc6ef94b8846da7933f230] RESPONSE SetWindowRect {
+   "height": 770,
+   "width": 1368,
+   "x": 8,
+   "y": 8
+}
+[1644153985.008][INFO]: [e82a641835fc6ef94b8846da7933f230] COMMAND Navigate {
+   "url": "http://localhost:8080/"
+}
+[1644153985.008][INFO]: Waiting for pending navigations...
+[1644153985.009][INFO]: Done waiting for pending navigations. Status: ok
+[1644153989.144][INFO]: Waiting for pending navigations...
+[1644153989.171][INFO]: Done waiting for pending navigations. Status: ok
+[1644153989.379][INFO]: Waiting for pending navigations...
+[1644153989.385][INFO]: Done waiting for pending navigations. Status: ok
+[1644153993.244][INFO]: Waiting for pending navigations...
+[1644153993.249][INFO]: Done waiting for pending navigations. Status: ok
+[1644153993.249][INFO]: [e82a641835fc6ef94b8846da7933f230] RESPONSE Navigate ERROR unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=97.0.4692.99)
+[1644153993.256][INFO]: [e82a641835fc6ef94b8846da7933f230] COMMAND Screenshot {
+
+}
+[1644153993.256][INFO]: Waiting for pending navigations...
+[1644153993.257][INFO]: Done waiting for pending navigations. Status: ok
+[1644153993.406][INFO]: Waiting for pending navigations...
+[1644153993.407][INFO]: Done waiting for pending navigations. Status: ok
+[1644153993.407][INFO]: [e82a641835fc6ef94b8846da7933f230] RESPONSE Screenshot "iVBORw0KGgoAAAANSUhEUgAABpoAAANVCAYAAABoHC2oAAAAAXNSR0IArs4c6QAAIABJREFUeJzs3X+Y1mWBL/63jDopK6ZFF7ZwuTXoniDbHaR28fJ8Yy6+R4mjkCm4W0Amgkr0w/VrIUcPy1UHqb4uWa4aiBVSrZCnQNbQDgc86xc6ZszVGtO1yWQuk7LNWbUpt..."
+[1644153993.420][INFO]: [e82a641835fc6ef94b8846da7933f230] COMMAND ExecuteScript {
+   "args": [  ],
+   "script": "var source = document.documentElement.outerHTML; \nif (!source) { source = new XMLSerializer().serializeToString(document); }\nreturn source;"
+}
+[1644153993.420][INFO]: Waiting for pending navigations...
+[1644153993.421][INFO]: Done waiting for pending navigations. Status: ok
+[1644153993.436][INFO]: Waiting for pending navigations...
+[1644153993.437][INFO]: Done waiting for pending navigations. Status: ok
+[1644153993.437][INFO]: [e82a641835fc6ef94b8846da7933f230] RESPONSE ExecuteScript "\u003Chtml dir=\"ltr\" lang=\"ru\">\u003Chead>\n  \u003Cmeta charset=\"utf-8\">\n  \u003Cmeta name=\"color-scheme\" content=\"light dark\">\n  \u003Cmeta name=\"theme-color\" content=\"#fff\">\n  \u003Cmeta name=\"viewport\" content=\"width=device-..."
+[1644153993.552][INFO]: [e82a641835fc6ef94b8846da7933f230] COMMAND Quit {
+
+}
+[1644153993.571][INFO]: [e82a641835fc6ef94b8846da7933f230] RESPONSE Quit

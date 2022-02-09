@@ -23,7 +23,6 @@ public class CaseSteps {
         $(By.xpath("//a[contains(text(),'replace')]".replace("replace", project.getName()))).click();
         $(By.id("navigation-suites")).click();
         $(By.xpath("//a[@class='editLink']")).hover().click();
-
         $(By.id("title")).setValue(update_case.getName());
         $(By.id("accept")).click();
     }
