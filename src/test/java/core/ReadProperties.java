@@ -20,6 +20,7 @@ public class ReadProperties {
     public static String getUrl() {
         return properties.getProperty("url");
     }
+
     public static String getUrlDashboardPage() {
         return properties.getProperty("dashboard_url");
     }
