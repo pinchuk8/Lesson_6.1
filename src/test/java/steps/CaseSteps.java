@@ -33,5 +33,6 @@ public class CaseSteps {
         $(By.id("navigation-suites")).click();
         $(By.xpath("//a[@class='deleteLink']")).hover().click();
         $(By.xpath("(//*[contains(text(), 'Mark as Deleted')])[5]")).click();
+
     }
 }
