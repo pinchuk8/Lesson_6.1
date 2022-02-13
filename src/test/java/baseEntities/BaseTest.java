@@ -1,7 +1,9 @@
 package baseEntities;
 
 import com.codeborne.selenide.Configuration;
+import core.DataBaseService;
 import core.ReadProperties;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import pages.LoginPage;
 
@@ -9,7 +11,8 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class BaseTest {
-    @BeforeClass
+    protected DataBaseService dataBaseService;
+    @BeforeClass(dependsOnMethods = "setupConnection")
     public void openPage() {
         org.apache.log4j.BasicConfigurator.configure();
         Configuration.baseUrl= ReadProperties.getUrl();
@@ -25,6 +28,16 @@ public class BaseTest {
         loginPage.getUsernameField().setValue(ReadProperties.getUsername());
         $("#password").val(ReadProperties.getPassword());
         $("#button_primary").click();
+    }
+    @BeforeClass
+    public void setupConnection() {
+        org.apache.log4j.BasicConfigurator.configure();
+        dataBaseService = new DataBaseService();
+    }
+
+    @AfterClass
+    public void closeConnection() {
+        dataBaseService.closeConnection();
     }
 
 }
