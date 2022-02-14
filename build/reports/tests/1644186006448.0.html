@@ -1,0 +1,1803 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>lpkxu - TestRail</title>
+
+
+			<link type="text/css" rel="stylesheet" href="https://static.testrail.io/7.3.1.3001/css/app-modern-combined.css" media="all">
+		<link type="text/css" rel="stylesheet" href="https://static.testrail.io/7.3.1.3001/css/font.css" media="all">
+	<link type="text/css" rel="stylesheet" href="https://static.testrail.io/7.3.1.3001/css/drilldown.css" media="all">
+	<link type="text/css" rel="stylesheet" href="https://static.testrail.io/7.3.1.3001/css/brand/style.css" media="all">
+	<link type="text/css" rel="stylesheet" href="https://static.testrail.io/7.3.1.3001/css/brand/brand-modern.css" media="all">
+	<link type="text/css" rel="stylesheet" href="https://static.testrail.io/7.3.1.3001/css/assembla.css" media="all">
+	<link type="text/css" rel="stylesheet" href="https://static.testrail.io/7.3.1.3001/css/banner-enterprise-modern.css" media="all">
+
+    <link rel="shortcut icon" href="https://static.testrail.io/7.3.1.3001/images/favicon.ico">
+    <script async="" src="https://cdn.pendo.io/agent/static/1c20428c-1995-4c00-6e1c-daff12af9c00/pendo.js"></script><script type="text/javascript" src="https://static.testrail.io/7.3.1.3001/js/jquery.js"></script>
+<script type="text/javascript" src="https://static.testrail.io/7.3.1.3001/js/fusioncharts.js"></script>
+<script type="text/javascript" src="https://static.testrail.io/7.3.1.3001/js/fusioncharts.theme.fusion.js"></script><style type="text/css">@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu3cOWxw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu3cOWxw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ft calendar customization */
+.fc-cal-date-normal-fusion {
+  color: #5F5F5F;
+  font-family: 'Source Sans Pro';
+  font-size: 11px;
+}
+
+.fc-cal-date-selected-fusion {
+  color: #FEFEFE;
+  font-family: 'Source Sans Pro SemiBold';
+  font-size: 11px;
+}</style>
+    <script type="text/javascript">
+        var _0x172b=['915521FAOgwP','1WUUTor','85768HrInlH','1VBoajH','701113SlGqlh','596675VFZSmj','430136IMhboy','iyE4qlbA7A3C4A2F1D1I1B1A2A3B1B3fqyH2B7C-16xvhyA2E1lduC7E2B4E2F2G2C1B10B2D1E6C1E1E3E1G2c1D-16yC2A3E2yD1J2B3lozD1B1G4da1wB9B6C6dG-10A-8D3J2A9B1A8C7E1E5A2A1A1sB-22uE2D6G1F1H-8H-7lB8A5C7epG4d1I3B8lnE-13F4E2D3F1H4A10D9C1B5E6B1F4E3E1g==','9197lCfGYC','713897AESQnW','1QhbbSq','license','33GAfgRX'];var _0x3f57b9=_0x10c9;function _0x10c9(_0x3cfbbf,_0x10e5b7){_0x3cfbbf=_0x3cfbbf-0x73;var _0x172b34=_0x172b[_0x3cfbbf];return _0x172b34;}(function(_0x22f311,_0x1ab4f2){var _0x50a77f=_0x10c9;while(!![]){try{var _0x461480=parseInt(_0x50a77f(0x7b))+-parseInt(_0x50a77f(0x75))*-parseInt(_0x50a77f(0x7e))+parseInt(_0x50a77f(0x7c))+parseInt(_0x50a77f(0x78))+parseInt(_0x50a77f(0x7f))*parseInt(_0x50a77f(0x79))+parseInt(_0x50a77f(0x7a))*-parseInt(_0x50a77f(0x77))+-parseInt(_0x50a77f(0x76))*parseInt(_0x50a77f(0x73));if(_0x461480===_0x1ab4f2)break;else _0x22f311['push'](_0x22f311['shift']());}catch(_0x19bcfb){_0x22f311['push'](_0x22f311['shift']());}}}(_0x172b,0x7d53f),FusionCharts['options'][_0x3f57b9(0x74)]({'key':_0x3f57b9(0x7d),'creditLabel':![]}));    </script>
+<script type="text/javascript" src="https://static.testrail.io/7.3.1.3001/js/html2canvas.js"></script>
+<script type="text/javascript" src="https://static.testrail.io/7.3.1.3001/js/jquery.js"></script>
+<script charset="utf-8" src="https://static.testrail.io/7.3.1.3001/js/fusioncharts.charts.js"></script><script charset="utf-8" src="https://static.testrail.io/7.3.1.3001/js/fusioncharts.excelexport.js"></script><link type="text/css" rel="stylesheet" href="https://pendo-static-5699730914541568.storage.googleapis.com/guide-content/4E3z5uWyZrR33ZoiWCGxY6IGV7E@hnixR8-p_2H5A6MW6X1ymGBKyug/d8MzsTl5h0UcUciua5iRHPkFFt4/4Pz_Bx1-oEFVfH59WDN1wHnCPP0.guide.css?sha256=aftxFG-Wvj4d3V_1swa1OpM_VzLTR_u3UPnig9cHs8U"><link type="text/css" rel="stylesheet" href="https://pendo-static-5699730914541568.storage.googleapis.com/guide-content/qADGmwpNA5y6I_cVczLdzK3Yk6s@hnixR8-p_2H5A6MW6X1ymGBKyug/aHPDTwskJc9k-5XEmnovFDpXDkE/SJcV1nQiOjwunpZTbhq2IfTF2Ww.guide.css?sha256=e6X6PKoSQLa_Xej-If_l_rEY81wv6T5iuwil5MMA2KU"></head>
+	<body style="min-width: 960px" class="modern">
+
+
+<script type="text/javascript">
+	$(document).ready(
+		function()
+		{
+			$('#body').css('display', 'table');
+		}
+	);
+</script>
+
+	
+
+<script type="text/javascript">
+			$(document).ready(function(){
+				$.datepicker.setDefaults(
+					{
+						dateFormat: 'm/d/yy',
+						dayNames: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+						dayNamesShort: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+						dayNamesMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
+						monthNames: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+						monthNamesShort: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+						firstDay: 0
+                    }
+				);
+			});
+		</script>
+
+	<div id="top">
+    <div id="top-logo">
+        <a href="javascript:void(0)" id="bannerLink"><img src="https://static.testrail.io/7.3.1.3001/images/layout/testrail-logo.svg"></a>
+    </div>
+    <div class="bubble estimate-bubble" id="enterpriseBubble">
+    <a class="close close-hover" href="javascript: void(0);" onclick="App.Dialogs.trEnterpriseBannerConfirmNew('logo')">×</a>
+    <div class="modules modules_tab_fullsection">
+        <div class="modules_tab_lefthalf">
+            <img src="https://static.testrail.io/7.3.1.3001/images/banner/editionsimage.png">
+        </div>
+        <div class="modules_tab_righthalf">
+            <div id="logo_confirm"></div>
+            <div id="logo_banner_desc">
+                <div class="hd_sb_txt">
+                    <span style="color: #979797;">Your edition:</span> 
+    TestRail Professional                </div>
+                <div class="hd_sb_txt">
+                    Enable enterprise-grade <strong>security</strong> 
+    and <strong>performance.</strong>                </div>
+                <a href="index.php?/enterprise" class="button-enterprise button-arrow button-discover">
+                    Explore Enterprise                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="top-panel">
+		<div class="top-panel-inner">
+			<div class="top-social">
+				<a href="http://blog.gurock.com/" tooltip-text="Learn more about new TestRail versions and features on the Gurock blog." target="_blank" tabindex="-1" class="top-social-link link-tooltip"><div class="icon-header-blog"></div></a>
+				<a href="http://twitter.com/testrail" tooltip-text="Follow TestRail on Twitter for relevant TestRail updates." target="_blank" tabindex="-1" class="top-social-link link-tooltip"><div class="icon-header-twitter"></div></a>
+				<a href="https://secure.gurock.com/customers/testrail/newsletter?email=atrostyanko+0401@gmail.com" target="_blank" tooltip-text="Subscribe to Gurock's newsletter to receive TestRail updates in your inbox." class="top-social-link link-tooltip"><div class="icon-header-mail"></div></a>
+			</div>
+			<ul class="top-menu pull-right">
+			  <li class="top-menu-item"><a id="inProgressLink" href="javascript:void(0)" onclick="this.blur(); App.Tests.showInProgress(); return false;">Working On <span class="caret" style="vertical-align: 2px"></span></a>
+				</li><li class="top-menu-item"><a class="dropdownLink" id="navigation-user" href="#userDropdown" title="Alex Tros"><span class="navigation-username">Alex Tros</span> <span class="caret" style="vertical-align: 2px"></span></a>
+				</li><li class="top-menu-item"><a class="dropdownLink top-menu-highlight" id="navigation-menu" href="#helpDropdown" tabindex="-1">Help &amp; Feedback <span class="caret top-menu-highlight" style="vertical-align: 2px"></span></a>
+				</li>
+			</ul>
+									<div class="top-search">
+								<form action="index.php?/search/index/797" style="display: inline" method="post">					<input type="hidden" name="_token" value="Uw46B40VFyXZhc6N1ENa">					<input class="top-search-control" type="text" name="query" tabindex="-1">
+				</form>			</div>
+					</div>
+	</div>
+			<div class="top-section top-section-with-return text-ppp">
+			<span id="return"><a class="link-noline" id="navigation-dashboard-top" href="index.php?/dashboard">← Return to Dashboard</a></span>
+			<a class="link-noline" id="navigation-project" href="index.php?/projects/overview/797">TMSmhqpt</a>
+		</div>
+	</div>
+
+<form id="newsletterForm" target="_blank" action="https://secure.gurock.com/customers/testrail/newsletter?email=" method="post">
+	<input name="cm-ahdml-ahdml" id="newsletter" type="hidden">
+</form>
+
+<div id="header">
+	<ul class="header-menu">
+		<li class="header-menu-item header-menu-item-right"><a tabindex="-1" href="index.php?/admin/overview" id="navigation-admin">Administration</a></li>
+<li class="header-menu-item"><a tabindex="-1" href="index.php?/projects/overview/797" id="navigation-projects">Overview</a></li><li class="header-menu-item"><a tabindex="-1" href="index.php?/todos/overview/797" id="navigation-todos">Todo</a></li><li class="header-menu-item header-menu-item-selected"><a tabindex="-1" href="index.php?/milestones/overview/797" id="navigation-milestones">Milestones</a></li><li class="header-menu-item"><a tabindex="-1" href="index.php?/runs/overview/797" id="navigation-runs">Test Runs &amp; Results</a></li>
+<li class="header-menu-item"><a tabindex="-1" href="index.php?/suites/view/659" id="navigation-suites">Test Cases</a></li>
+<li class="header-menu-item"><a tabindex="-1" href="index.php?/reports/overview/797" id="navigation-reports">Reports</a></li>	</ul>
+</div>
+
+<div id="separator"></div>
+<div id="body-container" class="">
+	<div id="body" class="table" style="display: table;">
+	<div id="content" class="column content overflow-content">
+		
+            
+            					<div id="content-header" class="content-header content-header-default">
+	<div class="content-header-inner">
+		<div class="content-header-result" style=""></div>
+				<div class="content-header-id">M336</div>
+											<div class="toolbar content-header-toolbar"><a class="toolbar-button toolbar-button-last content-header-button button-edit" href="index.php?/milestones/edit/336/1">Edit</a><a class="toolbar-button toolbar-button-last content-header-button button-report dropdownLink toolbar-button-first" href="#reportDropdown">Reports<span class="caret button-caret"></span></a></div><span class="content-header-icon"><a class="popupLink link-tooltip" rel="print" href="index.php?/milestones/plot/336&amp;format=outline" tooltip-header="Print Milestone" tooltip-text="Opens a print view of this milestone."><div class="icon-print"></div></a></span><span class="content-header-icon"><a class="dropdownLink link-tooltip" href="#exportDropdown" tooltip-header="Export Milestone" tooltip-text="Exports this milestone into different formats (XML, Excel/CSV)."><div class="icon-export"></div></a></span>		                            		<div class="content-header-title page_title display-inline-block">
+																				lpkxu					</div>
+	</div>
+</div>
+                <script type="text/javascript">
+                    $("#sites").prop("selectedIndex", 0);
+			   </script>
+																		<div id="content-inner" class="content-inner goals-clear">
+																	                  
+
+<div id="reportDropdown" class="dropdown dropdown-menu dropdown-menu-grouped" style="width: 225px">
+	<div class="dropdown-menu-title top">Defects</div>
+	<ul>
+		<li class="link-tooltip" tooltip-position="left" tooltip-text="Shows a summary of found defects for this milestone.">
+			<a class="dropdown-menu-link dropdown-menu-link-report" href="index.php?/reports/add_job/797&amp;plugin=defects_summary&amp;milestone_ids=336">
+				Summary			</a>
+		</li>
+		<li class="dropdown-menu-separator"></li>
+		<li class="link-tooltip" tooltip-position="left" tooltip-text="Shows a summary of found defects for this milestone per test case &amp; test.">
+			<a class="dropdown-menu-link dropdown-menu-link-report" href="index.php?/reports/add_job/797&amp;plugin=cases_defect_summary&amp;milestone_ids=336">
+				Summary for Cases			</a>
+		</li>
+		<li class="dropdown-menu-separator"></li>
+		<li class="link-tooltip" tooltip-position="left" tooltip-text="Shows a summary of found defects for the references (requirements, user stories, etc.) in this milestone.">
+			<a class="dropdown-menu-link dropdown-menu-link-report" href="index.php?/reports/add_job/797&amp;plugin=references_defect_summary&amp;milestone_ids=336">
+				Summary for References			</a>
+		</li>
+	</ul>
+	<div class="dropdown-menu-title">Milestone</div>
+	<ul>
+		<li class="link-tooltip" tooltip-position="left" tooltip-text="Shows a full summary &amp; overview of this milestone with statistics as well as activity and progress details.">
+			<a class="dropdown-menu-link dropdown-menu-link-report" href="index.php?/reports/add_job/797&amp;plugin=milestones_summary&amp;milestone_id=336">
+				Summary			</a>
+		</li>
+	</ul>
+	<div class="dropdown-menu-title">Results</div>
+	<ul>
+		<li class="link-tooltip" tooltip-position="left" tooltip-text="Shows the results in this milestone per test case (result coverage &amp; comparison).">
+			<a class="dropdown-menu-link dropdown-menu-link-report" href="index.php?/reports/add_job/797&amp;plugin=cases_result_coverage&amp;milestone_ids=336">
+				Comparison for Cases			</a>
+		</li>
+		<li class="dropdown-menu-separator"></li>
+		<li class="link-tooltip" tooltip-position="left" tooltip-text="Shows the results for the references (requirements, user stories, etc.) in this milestone (result coverage &amp; comparison).">
+			<a class="dropdown-menu-link dropdown-menu-link-report" href="index.php?/reports/add_job/797&amp;plugin=references_result_coverage&amp;milestone_ids=336">
+				Comparison for References			</a>
+		</li>
+		<li class="dropdown-menu-separator"></li>
+		<li class="link-tooltip" tooltip-position="left" tooltip-text="Shows the distribution and groups for a specific test attribute (e.g. priority, type or status) for this milestone.">
+			<a class="dropdown-menu-link dropdown-menu-link-report" href="index.php?/reports/add_job/797&amp;plugin=tests_property_groups&amp;milestone_ids=336">
+				Property Distribution			</a>
+		</li>
+	</ul>
+	<div class="dropdown-menu-title">Users</div>
+	<ul>
+		<li class="link-tooltip" tooltip-position="left" tooltip-text="Shows the workload summary, estimates and forecasts for users in this milestone.">
+			<a class="dropdown-menu-link dropdown-menu-link-report" href="index.php?/reports/add_job/797&amp;plugin=users_workload_summary&amp;milestone_ids=336">
+				Workload Summary			</a>
+		</li>
+	</ul>
+</div><div id="defectDropdown" class="dropdown dropdown-menu dropdown-menu-grouped dropdown-menu-defect">
+	<ul>
+
+        
+        	</ul>
+</div>
+
+
+
+<div id="statsContainer">
+
+																																				
+<div class="chart-pie" rel="4">
+	<div class="table">
+		<div id="statusChartContainer">
+			<div id="statusChart" class="column chart-pie-status"><span id="chartobject-1" class="fusioncharts-container" style="position: relative; text-align: left; line-height: normal; display: inline-block; zoom: 1; vertical-align: middle; font-weight: normal; font-variant: normal; font-style: normal; text-decoration: none; padding: 0px; margin: 0px; border: none; direction: ltr; transform: none; width: 100%; height: 100%;"><svg height="190" version="1.1" width="200" xmlns="http://www.w3.org/2000/svg" id="raphael-paper-3" style="overflow: hidden; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: default; vertical-align: middle; position: relative; background-color: rgb(255, 255, 255);"><desc></desc><defs><clipPath id="rr-98815BE9-4E0B-4F80-9B8F-350385A62D0A"><rect x="0" y="0" width="200" height="190" transform="matrix(1,0,0,1,0,0)"></rect></clipPath><clipPath id="rr-D767BC42-502D-40DE-A388-772F45C72C98"><rect x="0" y="0" width="200" height="190" transform="matrix(1,0,0,1,0,0)"></rect></clipPath><radialGradient id="rr-3-xr___74_100_95__rgba_60_184_80_1__0-rgba_60_184_80_1__100" r="74" cx="100" cy="95" fx="100" fy="95"><stop offset="0%" stop-color="#3cb850" stop-opacity="1"></stop><stop offset="100%" stop-color="#3cb850" stop-opacity="1"></stop></radialGradient><radialGradient id="rr-3-xr___74_100_95__rgba_89_89_89_1__0-rgba_89_89_89_1__100" r="74" cx="100" cy="95" fx="100" fy="95"><stop offset="0%" stop-color="#595959" stop-opacity="1"></stop><stop offset="100%" stop-color="#595959" stop-opacity="1"></stop></radialGradient><radialGradient id="rr-3-xr___74_100_95__rgba_151_151_151_1__0-rgba_151_151_151_1__100" r="74" cx="100" cy="95" fx="100" fy="95"><stop offset="0%" stop-color="#979797" stop-opacity="1"></stop><stop offset="100%" stop-color="#979797" stop-opacity="1"></stop></radialGradient><radialGradient id="rr-3-xr___74_100_95__rgba_252_194_0_1__0-rgba_252_194_0_1__100" r="74" cx="100" cy="95" fx="100" fy="95"><stop offset="0%" stop-color="#fcc200" stop-opacity="1"></stop><stop offset="100%" stop-color="#fcc200" stop-opacity="1"></stop></radialGradient><radialGradient id="rr-3-xr___74_100_95__rgba_228_0_70_1__0-rgba_228_0_70_1__100" r="74" cx="100" cy="95" fx="100" fy="95"><stop offset="0%" stop-color="#e40046" stop-opacity="1"></stop><stop offset="100%" stop-color="#e40046" stop-opacity="1"></stop></radialGradient></defs><g class="raphael-group-4-parentgroup"><g class="raphael-group-5-background"><rect x="0" y="0" width="200" height="190" stroke="none" fill-opacity="1" fill="#ffffff" ry="0" rx="0"></rect><rect x="0" y="0" width="200" height="190" stroke="#767575" stroke-opacity="0.5" stroke-width="0" stroke-dasharray="none" fill="none" ry="0" rx="0"></rect></g><g class="raphael-group-26-canvas"></g><g class="raphael-group-6-axisbottom"></g><g class="raphael-group-28-axisReferenceVisualsFloor" clip-path="url('#rr-98815BE9-4E0B-4F80-9B8F-350385A62D0A')"></g><g class="raphael-group-27-axisReferenceVisualsBottom"></g><g class="raphael-group-7-belowplot"></g><g class="raphael-group-29-crossline"></g><g class="raphael-group-30-crosslineBottom"></g><g class="raphael-group-33-axisReferenceVisualsMiddle" clip-path="url('#rr-D767BC42-502D-40DE-A388-772F45C72C98')"></g><g class="raphael-group-35-quadrant"></g><g class="raphael-group-8-plots"><g class="raphael-group-37-column-shadow-group"></g><g class="raphael-group-38-column"></g><g class="raphael-group-39-area-shadow-group"></g><g class="raphael-group-40-area"></g><g class="raphael-group-41-line-shadow-group"></g><g class="raphael-group-42-line"></g><g class="raphael-group-43-default-shadow-group"></g><g class="raphael-group-44-default"></g></g><g class="raphael-group-9-scrollbar-container"></g><g class="raphael-group-10-axistop"></g><g class="raphael-group-11-sumlabels fusioncharts-datalabels"></g><g class="raphael-group-34-axisReferenceVisualsTop"></g><g class="raphael-group-36-axisReferenceVisualsCeil"></g><g class="raphael-group-12-datalabel" font-family="Source Sans Pro" font-size="14px" font-weight="normal" font-style="normal" style="font-family: &quot;Source Sans Pro&quot;; font-size: 14px; font-weight: normal; font-style: normal;"><g class="raphael-group-32-canvasdatalabel"></g><g class="raphael-group-45-pie"><g class="raphael-group-46-pie-plot"><g class="raphael-group-49-plot-shadows"></g><g class="raphael-group-48-plots"><path d="M174,95L100,95Z" fill="url('#rr-3-xr___74_100_95__rgba_60_184_80_1__0-rgba_60_184_80_1__100')" stroke="#cfeed4" stroke-linecap="round" fill-opacity="1" transform="matrix(1,0,0,1,0,0)" stroke-width="0" stroke-opacity="0" stroke-dasharray="none" style="cursor: pointer;"></path><path d="M174,95L100,95Z" fill="url('#rr-3-xr___74_100_95__rgba_89_89_89_1__0-rgba_89_89_89_1__100')" stroke="#d6d6d6" stroke-linecap="round" fill-opacity="1" transform="matrix(1,0,0,1,0,0)" stroke-width="0" stroke-opacity="0" stroke-dasharray="none" style="cursor: pointer;"></path><path d="M26,95A74,74,0,0,0,174,95A74,74,0,0,0,26,95Z" fill="url('#rr-3-xr___74_100_95__rgba_151_151_151_1__0-rgba_151_151_151_1__100')" stroke="#e5e5e5" stroke-linecap="round" fill-opacity="1" transform="matrix(1,0,0,1,0,0)" stroke-width="0" stroke-opacity="0" stroke-dasharray="none"></path><path d="M174,95.00000000000001L100,95Z" fill="url('#rr-3-xr___74_100_95__rgba_252_194_0_1__0-rgba_252_194_0_1__100')" stroke="#fff0c0" stroke-linecap="round" fill-opacity="1" transform="matrix(1,0,0,1,0,0)" stroke-width="0" stroke-opacity="0" stroke-dasharray="none"></path><path d="M174,95.00000000000001L100,95Z" fill="url('#rr-3-xr___74_100_95__rgba_228_0_70_1__0-rgba_228_0_70_1__100')" stroke="#f9c0d1" stroke-linecap="round" fill-opacity="1" transform="matrix(1,0,0,1,0,0)" stroke-width="0" stroke-opacity="0" stroke-dasharray="none"></path></g></g><g class="raphael-group-47-pie-label"><g class="raphael-group-50-labels" font-family="Source Sans Pro" font-size="14px" font-weight="normal" font-style="normal" style="border-radius: 0px; font-family: &quot;Source Sans Pro&quot;; font-size: 14px; font-weight: normal; font-style: normal;"></g><g class="raphael-group-51-connector-shadows"></g><g class="raphael-group-52-anchor-shadows"></g></g></g></g><g class="raphael-group-31-crosslineTop"></g><g class="raphael-group-13-aboveplot"></g><g class="raphael-group-14-caption"></g><g class="raphael-group-15-chartdefault"></g><g class="raphael-group-16-chartdefault-shadow"></g><g class="raphael-group-17-tracker"></g><g class="raphael-group-18-logo"></g><g class="raphael-group-19-selectorGroup"></g><g class="raphael-group-20-legend"></g><g class="raphael-group-21-toolbar-master"><g class="raphael-group-24-toolbar"><rect fill-opacity="0" fill="#eeeeee" stroke="#eeeeee" stroke-opacity="0" stroke-width="1" width="0" height="0" x="190" y="6" ry="0" rx="0"></rect></g></g></g></svg><div type="div" style="left: auto; top: 0px; padding: 5px 3px; border: 1px solid rgb(100, 100, 100); margin: 0px; outline: none; position: absolute; z-index: 50; right: auto; overflow: hidden; background: rgb(255, 255, 255); box-shadow: rgb(153, 153, 153) 2px 2px 5px; display: none;"></div></span></div>
+																																												
+
+	<div class="column chart-pie-column-legend" id="legend-">
+	<div class="chart-legend" style="padding: 20px 10px 0 40px">
+								<div class="table chart-legend-item" style="height: auto">
+			<div class="column column-valign chart-legend-column-icon">
+				<div class="chart-legend-icon" style="background: #3cb850">
+				</div>
+			</div>
+			<div class="column">
+				<div class="chart-legend-name text-ppp">0 Passed</div>
+				<div class="chart-legend-description text-ppp">0% set to Passed</div>
+			</div>
+		</div>
+								<div class="table chart-legend-item" style="height: auto">
+			<div class="column column-valign chart-legend-column-icon">
+				<div class="chart-legend-icon" style="background: #595959">
+				</div>
+			</div>
+			<div class="column">
+				<div class="chart-legend-name text-ppp">0 Blocked</div>
+				<div class="chart-legend-description text-ppp">0% set to Blocked</div>
+			</div>
+		</div>
+								<div class="table chart-legend-item" style="height: auto">
+			<div class="column column-valign chart-legend-column-icon">
+				<div class="chart-legend-icon" style="background: #fcc200">
+				</div>
+			</div>
+			<div class="column">
+				<div class="chart-legend-name text-ppp">0 Retest</div>
+				<div class="chart-legend-description text-ppp">0% set to Retest</div>
+			</div>
+		</div>
+								<div class="table chart-legend-item" style="height: auto">
+			<div class="column column-valign chart-legend-column-icon">
+				<div class="chart-legend-icon" style="background: #e40046">
+				</div>
+			</div>
+			<div class="column">
+				<div class="chart-legend-name text-ppp">0 Failed</div>
+				<div class="chart-legend-description text-ppp">0% set to Failed</div>
+			</div>
+		</div>
+			</div>
+</div>							</div>
+			<div class="column chart-pie-column-percent">
+		<div class="chart-pie-percent" style="padding-top: 5em">
+		<div class="chart-pie-percent-title">0%</div>
+		<div class="chart-pie-percent-description">passed</div>
+					<div class="chart-pie-percent-note text-secondary" style="line-height: 130%">
+				0 / 0 untested (0%).			</div>
+			</div>
+</div>    </div>
+    <div class="chart-pie-footer-stage1">
+			<div class="chart-pie-footer-percent">
+				<strong>0%</strong>
+				Passed			</div>
+			<div class="text-secondary">
+				0 / 0 untested (0%).			</div>
+    </div>
+	<div class="chart-pie-footer-stage2">
+		<div class="chart-pie-footer-bar">
+			<div class="table">
+	<div class="column">
+		<div class="chart-bar chart-bar-lg">
+			<div class="chart-bar-transparent" style="width: 100%"></div>
+			</div>
+	</div>
+		<div class="column chart-bar-percent ">
+		0%
+	</div>
+</div>		</div>
+		<div class="text-secondary center">
+			0 / 0 untested (0%).		</div>
+	</div>
+</div>
+<a download="TestRail-stats-797-20220206221957.png" href="#" id="dl" hidden="">download image</a>
+
+<script type="text/javascript">
+	$(function() {
+		$(document).ready(function() {
+			App.Charts.status = new FusionCharts({
+				type: 'pie2d',
+				renderAt: 'statusChart',
+				width: '100%',
+				height: '100%',
+				dataFormat: 'json',
+				dataSource: {
+					chart: {
+						showToolTip: 0,
+						showLegend: false,
+						showLabels: false,
+						showPercentageInLabel: '0',
+						enableSmartLabels: '0',
+						showValues: false,
+						theme: 'fusion',
+                        bgColor: '#FFFFFF',
+						exportEnabled: '1',
+						exportshowmenuitem: '0',
+						chartLeftMargin: '0',
+						chartTopMargin: '0',
+						chartRightMargin: '0',
+						chartBottomMargin: '0',
+						plotToolText: '<strong>$label</strong> <br />$value ($percentValue)<div id="drilldown-icon"></div>',
+						animation: false,
+						enableMultiSlicing: false
+					},
+					data: [{"label":"Passed","value":0,"color":"3cb850","link":"JavaScript:App.Drilldown.tests(797,0, 0, MILESTONE, 336, 1)"},{"label":"Blocked","value":0,"color":"595959","link":"JavaScript:App.Drilldown.tests(797,0, 0, MILESTONE, 336, 2)"},{"label":"Untested","value":1,"color":"979797"},{"label":"Retest","value":0,"color":"fcc200"},{"label":"Failed","value":0,"color":"e40046"}]				},
+			}).render();
+			
+			$('#csv-download').click(function() {
+				App.Charts.status.exportChart({
+					exportFormat: 'csv',
+					exportFileName: 'TestRail-stats-797-20220206221957'
+				});
+			});
+				
+			$('#png-download').click(function() {
+				App.Charts.status.setChartAttribute('enableSlicing', '0');
+				setTimeout(function() {
+					html2canvas($('#statusChartContainer')[0], {
+						height: 230,
+						scrollY: -window.scrollY
+					}).then(function(canvas) {
+						var dl = document.getElementById('dl');
+						var dt = canvas.toDataURL('image/png');
+						dl.href = dt;
+						dl.click();
+					});
+					App.Charts.status.setChartAttribute('enableSlicing', '1');
+				}, 100);
+			});
+		});
+	});
+</script></div>
+
+<div id="drilldown_container"></div>
+<div id="content_container">
+
+
+    
+<div id="runs-1435486052">
+        <h1 class="top ">
+        Test Runs    </h1>
+            <span class="delete-selected-link margin-top-45" id="delete-run">
+            <a href="javascript:void(0)" onclick="App.Runs.BulkRunDelete(this);">
+                <span class="button button-negative button-delete">
+                    Delete selected                </span>
+            </a>
+        </span>
+        
+    	    <p>No active test runs in this milestone.</p>
+    </div>
+</div>
+<div id="exportDropdown" class="dropdown dropdown-menu" style="width: 150px">
+	<ul>
+		<li>
+			<a class="dropdown-menu-link" href="index.php?/milestones/export/336">
+					<div class="icon-xml-10" style="vertical-align: -1px"></div>
+				Export to XML			</a>
+		</li>
+		<li class="dropdown-menu-separator"></li>		
+		<li><a class="dropdown-menu-link" href="javascript:void(0)" onclick="this.blur(); App.Milestones.exportTestsCsv(336); return false;">
+				<div class="icon-csv-10" style="vertical-align: -1px"></div>
+				Export to CSV			</a>
+		</li>
+		<li class="dropdown-menu-separator"></li>		
+		<li>
+			<a class="dropdown-menu-link" href="javascript:void(0)" onclick="this.blur(); App.Milestones.exportTestsExcel(336); return false;">
+				<div class="icon-excel-10" style="vertical-align: -1px"></div>
+				Export to Excel			</a>
+		</li>
+	</ul>
+</div>
+<div class="dialog" id="exportCsvDialog" style="width: 500px">
+	<div class="dialog-title">
+		<span class="csv">Export to CSV</span>
+		<span class="excel">Export to Excel</span>
+	</div>
+	<form id="exportCsvForm" action="post">
+		<div class="dialog-body">
+			<div class="message message-error validationError" id="exportCsvErrorNoSection">
+				You need to select at least one section (or include all sections).			</div>
+			<div class="message message-error validationError" id="exportCsvErrorNoColumn">
+				You need to select at least one column to export.			</div>
+																																																																																																																																																																																																																																																																																																																																<div class="form-group">
+				<label>
+											Layout									</label>
+																																																																																																																																																																																																																																																																																	
+																													
+	
+<div class="checkbox-list" style="height: 250px" id="exportCsvColumns_control">
+	<div class="checkbox-list-inner">
+		<div class="checkbox-list-toolbar toolbar toolbar-compact">
+			<div class="toolbar-inner text-secondary">
+				Select																		<a class="link" href="javascript:void(0)" onclick="this.blur(); App.Controls.Checkboxes.checkAll('exportCsvColumns'); return false;">All</a>
+														 | 					<a class="link" href="javascript:void(0)" onclick="this.blur(); App.Controls.Checkboxes.checkNone('exportCsvColumns'); return false;">None</a>
+												</div>
+		</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:id">
+																					<label>
+					<span class="checkbox-name text-ppp">ID</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:id" type="checkbox" value="tests:id" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:title">
+																					<label>
+					<span class="checkbox-name text-ppp">Title</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:title" type="checkbox" value="cases:title" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:assignedto_id">
+																					<label>
+					<span class="checkbox-name text-ppp">Assigned To</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:assignedto_id" type="checkbox" value="tests:assignedto_id" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:custom_automation_type">
+																					<label>
+					<span class="checkbox-name text-ppp">Automation Type</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:custom_automation_type" type="checkbox" value="cases:custom_automation_type" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:original_case_id">
+																					<label>
+					<span class="checkbox-name text-ppp">Case ID</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:original_case_id" type="checkbox" value="tests:original_case_id" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:comment">
+																					<label>
+					<span class="checkbox-name text-ppp">Comment</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:comment" type="checkbox" value="tests:comment" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:defects">
+																					<label>
+					<span class="checkbox-name text-ppp">Defects</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:defects" type="checkbox" value="tests:defects" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:elapsed">
+																					<label>
+					<span class="checkbox-name text-ppp">Elapsed</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:elapsed" type="checkbox" value="tests:elapsed" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:estimate">
+																					<label>
+					<span class="checkbox-name text-ppp">Estimate</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:estimate" type="checkbox" value="cases:estimate" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:custom_expected">
+																					<label>
+					<span class="checkbox-name text-ppp">Expected Result</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:custom_expected" type="checkbox" value="cases:custom_expected" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:estimate_forecast">
+																					<label>
+					<span class="checkbox-name text-ppp">Forecast</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:estimate_forecast" type="checkbox" value="cases:estimate_forecast" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:custom_goals">
+																					<label>
+					<span class="checkbox-name text-ppp">Goals</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:custom_goals" type="checkbox" value="cases:custom_goals" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:in_progress_by">
+																					<label>
+					<span class="checkbox-name text-ppp">In Progress</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:in_progress_by" type="checkbox" value="tests:in_progress_by" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:custom_mission">
+																					<label>
+					<span class="checkbox-name text-ppp">Mission</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:custom_mission" type="checkbox" value="cases:custom_mission" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:plan_name">
+																					<label>
+					<span class="checkbox-name text-ppp">Plan</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:plan_name" type="checkbox" value="tests:plan_name" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:plan_id">
+																					<label>
+					<span class="checkbox-name text-ppp">Plan ID</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:plan_id" type="checkbox" value="tests:plan_id" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:custom_preconds">
+																					<label>
+					<span class="checkbox-name text-ppp">Preconditions</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:custom_preconds" type="checkbox" value="cases:custom_preconds" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:priority_id">
+																					<label>
+					<span class="checkbox-name text-ppp">Priority</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:priority_id" type="checkbox" value="cases:priority_id" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:refs">
+																					<label>
+					<span class="checkbox-name text-ppp">References</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:refs" type="checkbox" value="cases:refs" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:run_name">
+																					<label>
+					<span class="checkbox-name text-ppp">Run</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:run_name" type="checkbox" value="tests:run_name" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:run_config">
+																					<label>
+					<span class="checkbox-name text-ppp">Run Configuration</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:run_config" type="checkbox" value="tests:run_config" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:run_id">
+																					<label>
+					<span class="checkbox-name text-ppp">Run ID</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:run_id" type="checkbox" value="tests:run_id" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:section_id">
+																					<label>
+					<span class="checkbox-name text-ppp">Section</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:section_id" type="checkbox" value="cases:section_id" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:section_depth">
+																					<label>
+					<span class="checkbox-name text-ppp">Section Depth</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:section_depth" type="checkbox" value="cases:section_depth" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:section_desc">
+																					<label>
+					<span class="checkbox-name text-ppp">Section Description</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:section_desc" type="checkbox" value="cases:section_desc" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:section_full">
+																					<label>
+					<span class="checkbox-name text-ppp">Section Hierarchy</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:section_full" type="checkbox" value="cases:section_full" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:status_id">
+																					<label>
+					<span class="checkbox-name text-ppp">Status</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:status_id" type="checkbox" value="tests:status_id" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:custom_steps">
+																					<label>
+					<span class="checkbox-name text-ppp">Steps</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:custom_steps" type="checkbox" value="cases:custom_steps" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:custom_steps_separated">
+																					<label>
+					<span class="checkbox-name text-ppp">Steps</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:custom_steps_separated" type="checkbox" value="cases:custom_steps_separated" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:custom_step_results">
+																					<label>
+					<span class="checkbox-name text-ppp">Steps</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:custom_step_results" type="checkbox" value="tests:custom_step_results" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:custom_step_results.actual">
+																					<label>
+					<span class="checkbox-name text-ppp">Steps (Actual Result)</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:custom_step_results.actual" type="checkbox" value="tests:custom_step_results.actual" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:custom_steps_separated.additional_info">
+																					<label>
+					<span class="checkbox-name text-ppp">Steps (Additional Info)</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:custom_steps_separated.additional_info" type="checkbox" value="cases:custom_steps_separated.additional_info" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:custom_steps_separated.expected">
+																					<label>
+					<span class="checkbox-name text-ppp">Steps (Expected Result)</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:custom_steps_separated.expected" type="checkbox" value="cases:custom_steps_separated.expected" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:custom_step_results.expected">
+																					<label>
+					<span class="checkbox-name text-ppp">Steps (Expected Result)</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:custom_step_results.expected" type="checkbox" value="tests:custom_step_results.expected" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:custom_steps_separated.refs">
+																					<label>
+					<span class="checkbox-name text-ppp">Steps (References)</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:custom_steps_separated.refs" type="checkbox" value="cases:custom_steps_separated.refs" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:custom_steps_separated.shared_step_id">
+																					<label>
+					<span class="checkbox-name text-ppp">Steps (Shared step ID)</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:custom_steps_separated.shared_step_id" type="checkbox" value="cases:custom_steps_separated.shared_step_id" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:custom_step_results.status_id">
+																					<label>
+					<span class="checkbox-name text-ppp">Steps (Status)</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:custom_step_results.status_id" type="checkbox" value="tests:custom_step_results.status_id" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:custom_steps_separated.content">
+																					<label>
+					<span class="checkbox-name text-ppp">Steps (Step)</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:custom_steps_separated.content" type="checkbox" value="cases:custom_steps_separated.content" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:custom_step_results.step">
+																					<label>
+					<span class="checkbox-name text-ppp">Steps (Step)</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:custom_step_results.step" type="checkbox" value="tests:custom_step_results.step" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:template_id">
+																					<label>
+					<span class="checkbox-name text-ppp">Template</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:template_id" type="checkbox" value="cases:template_id" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:tested_by">
+																					<label>
+					<span class="checkbox-name text-ppp">Tested By</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:tested_by" type="checkbox" value="tests:tested_by" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:tested_on">
+																					<label>
+					<span class="checkbox-name text-ppp">Tested On</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:tested_on" type="checkbox" value="tests:tested_on" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-cases:type_id">
+																					<label>
+					<span class="checkbox-name text-ppp">Type</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-cases:type_id" type="checkbox" value="cases:type_id" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+								<div class="checkbox checkbox-list-item" id="exportCsvColumns_checkbox-tests:version">
+																					<label>
+					<span class="checkbox-name text-ppp">Version</span>
+					<input name="exportCsvColumns[]" id="exportCsvColumns-tests:version" type="checkbox" value="tests:version" checked="checked" class="checkbox-list-input">
+				</label>
+			</div>
+			</div>
+</div>
+			</div>
+									<div class="form-group">
+				<select class="form-control form-select form-control-full" id="exportCsvLayout" name="exportCsvLayout">
+					<option value="tests" selected="selected">Export latest results only (one line per test)</option>
+					<option value="results">Export all results and comments (multiple lines per test)</option>
+				</select>
+			</div>
+									<div id="exportCsvSeparatorHintContainer" class="form-group bottom">
+				<div class="checkbox">
+					<label>
+						Include separator hint for maximum Excel compatibility						<input type="checkbox" id="exportCsvSeparatorHint" name="exportCsvSeparatorHint" value="1" checked="checked">
+					</label>
+				</div>
+			</div>
+
+						<div id="exportCsvNewLinesForSeparatedStepsContainer" class="form-group bottom">
+				<div class="checkbox">
+					<label>
+						Include separated steps on separate rows						<input type="checkbox" id="exportCsvSeparatedStepsNewLines" name="exportCsvSeparatedStepsNewLines" value="1">
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="button-group dialog-buttons-highlighted">
+			<button class="button button-left button-positive button-add dialog-action-default" id="exportSubmit" type="submit">
+				Export			</button>
+			<a class="button button-left button-negative button-cancel dialog-action-close">
+				Cancel			</a>
+		</div>
+	</form>
+	<form action="index.php?/milestones/export_csv/336" id="exportCsvExportForm" method="post">		<input type="hidden" name="_token" value="Uw46B40VFyXZhc6N1ENa">		<input type="hidden" id="exportCsvExportSectionIDs" name="section_ids" value="">
+		<input type="hidden" id="exportCsvExportSectionInclude" name="section_include" value="">
+		<input type="hidden" id="exportCsvExportColumns" name="columns" value="">
+		<input type="hidden" id="exportCsvExportLayout" name="layout" value="">
+		<input type="hidden" id="exportCsvExportSeparatorHint" name="separator_hint" value="">
+		<input type="hidden" id="exportCsvExportSeparatedStepsNewLines" name="separated_steps_new_lines" value="">
+		<input type="hidden" id="exportCsvExportFormat" name="format" value="">
+	</form></div>
+<div class="bubble filter-bubble hidden" id="filterTestsBubble">
+	<div id="filterTestsContent" class="filter-bubble-inner">
+	</div>
+</div><div class="bubble integration-bubble" id="referenceBubble">
+	<div class="integration-bubble-busy busy">
+		<div class="icon-progress-large" title="Loading..."></div>
+	</div>	
+	<div class="error">
+		<div class="integration-bubble-error-header">
+			An Error Occurred		</div>
+		<div class="integration-bubble-error-body" id="referenceBubbleError"></div>
+	</div>
+	<div class="content"></div>
+</div>
+<div class="bubble filter-bubble hidden" id="filterTestsBubble">
+	<div id="filterTestsContent" class="filter-bubble-inner">
+	</div>
+</div>
+<script type="text/javascript">
+var statuses = {};
+statuses[1] = {"id":1,"name":"passed","system_name":"passed","label":"Passed","color_dark":"338a41","color_medium":"3cb850","color_bright":"4be663","color_gradient_a":"2b7537","color_gradient_b":"23602d"};
+statuses[2] = {"id":2,"name":"blocked","system_name":"blocked","label":"Blocked","color_dark":"474747","color_medium":"595959","color_bright":"8c8c8c","color_gradient_a":"3c3c3c","color_gradient_b":"313131"};
+statuses[3] = {"id":3,"name":"untested","system_name":"untested","label":"Untested","color_dark":"737373","color_medium":"979797","color_bright":"c9c9c9","color_gradient_a":"616161","color_gradient_b":"505050"};
+statuses[4] = {"id":4,"name":"retest","system_name":"retest","label":"Retest","color_dark":"b99109","color_medium":"fcc200","color_bright":"ffd549","color_gradient_a":"9d7b07","color_gradient_b":"816506"};
+statuses[5] = {"id":5,"name":"failed","system_name":"failed","label":"Failed","color_dark":"a9093a","color_medium":"e40046","color_bright":"fc004e","color_gradient_a":"8f0731","color_gradient_b":"760628"};
+statuses[6] = {"id":6,"name":"custom_status1","system_name":"custom_status1","label":"Unnamed 1","color_dark":"000000","color_medium":"a0a0a0","color_bright":"d0d0d0","color_gradient_a":"404040","color_gradient_b":"101010"};
+statuses[7] = {"id":7,"name":"custom_status2","system_name":"custom_status2","label":"Unnamed 2","color_dark":"000000","color_medium":"a0a0a0","color_bright":"d0d0d0","color_gradient_a":"404040","color_gradient_b":"101010"};
+statuses[8] = {"id":8,"name":"custom_status3","system_name":"custom_status3","label":"Unnamed 3","color_dark":"000000","color_medium":"a0a0a0","color_bright":"d0d0d0","color_gradient_a":"404040","color_gradient_b":"101010"};
+statuses[9] = {"id":9,"name":"custom_status4","system_name":"custom_status4","label":"Unnamed 4","color_dark":"000000","color_medium":"a0a0a0","color_bright":"d0d0d0","color_gradient_a":"404040","color_gradient_b":"101010"};
+statuses[10] = {"id":10,"name":"custom_status5","system_name":"custom_status5","label":"Unnamed 5","color_dark":"000000","color_medium":"a0a0a0","color_bright":"d0d0d0","color_gradient_a":"404040","color_gradient_b":"101010"};
+statuses[11] = {"id":11,"name":"custom_status6","system_name":"custom_status6","label":"Unnamed 6","color_dark":"000000","color_medium":"a0a0a0","color_bright":"d0d0d0","color_gradient_a":"404040","color_gradient_b":"101010"};
+statuses[12] = {"id":12,"name":"custom_status7","system_name":"custom_status7","label":"Unnamed 7","color_dark":"000000","color_medium":"a0a0a0","color_bright":"d0d0d0","color_gradient_a":"404040","color_gradient_b":"101010"};
+var status_default_id = 1;
+</script><div class="dialog bulk-delete-dialog" id="bulkDeleteDialog">
+    <div class="dialog-title">Confirmation</div>
+    <div class="dialog-body">
+        <p class="top bottom dialog-message"><strong>Delete these test milestones?</strong> This also unlinks the <br> milestones from all test runs and plans and cannot be <br>undone (no test runs and plans are deleted).</p>
+        <p class="dialog-extra text-delete"></p>
+        <div class="message message-delete bottom delete-confirm-container confirm-container">
+            <div class="checkbox">
+                <label>
+                    <span class="dialog-confirm"><span style="color:red">Yes, delete the selected milestones (cannot be <br>undone)</span></span>
+                    <span class="dialog-confirm-busy"></span>
+                    <input id="confirm-check" type="checkbox" value="1" name="deleteCheckbox">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="button-group dialog-buttons-highlighted">
+        <a class="button button-black button-black-disabled button-left button-positive button-disabled dialog-action-default">
+            Delete        </a>
+        <a class="button button-left button-delete button-disabled button-hidden button-no-margin-right dialog-action-secondary">
+        </a>
+        <a class="button button-cancel button-left button-negative dialog-action-close">
+            Cancel        </a>
+    </div>
+</div>
+		</div>
+	</div>
+	<div id="qpane-splitter" class="column splitter qpane-splitter" style="display: none">
+	</div>
+		<div id="qpane" class="column qpane" style="width: 600px; display: none">
+		<div id="qpane-empty" class="qpane-empty hidden">
+			<div class="qpane-empty-header">
+				No test case selected.			</div>
+			<div class="qpane-empty-body">
+				You can select a different group or change the filters.			</div>
+		</div>
+		<div id="qpane-inner">
+			<div id="qpaneSticky">
+				<div id="qpane-content">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="sidebar-splitter" class="column splitter sidebar-splitter">
+	</div>
+		<div id="sidebar" class="column sidebar" style="width: 250px">
+
+<div class="sidebar-inner">
+	<p class="top bottom">
+						No due date set.				    <br>
+            References            
+    </p>
+</div>
+
+<div class="sidebar-menu">
+	<ul>
+		<li class="sidebar-menu-item sidebar-menu-item-first sidebar-menu-item-selected">
+			<a id="navigation-milestones-status" href="index.php?/milestones/view/336">
+				Status</a>
+		</li>
+		<li class="sidebar-menu-item ">
+			<a id="navigation-milestones-activity" href="index.php?/milestones/activity/336">
+				Activity</a>
+		</li>
+		<li class="sidebar-menu-item ">
+			<a id="navigation-milestones-progress" href="index.php?/milestones/progress/336">
+				Progress</a>
+		</li>
+		<li class="sidebar-menu-item ">
+			<a id="navigation-milestones-defects" href="index.php?/milestones/defects/336">
+				Defects</a>
+		</li>
+	</ul>
+</div>
+<div class="attachments-new-dialog dialog dialog_attachment" id="attachmentNewDialogFile">
+	<div class="dialog-title">
+		<span class="addAttachment">Attach file</span>
+	</div>
+	
+<div class="attachments-filter bubble filter-bubble hidden" id="filterAttachmentsBubble">
+	<div id="filterAttachmentsContent" class="filter-bubble-inner">
+	</div>
+</div><script type="text/javascript">
+$(document).ready(function()
+{
+		App.Translations.add(
+		"attachments_drop",
+		"Drop files here to attach, or click to browse."	);
+		App.Translations.add(
+		"attachments_drop_image",
+		"Drop images here to embed, or click to browse."	);
+		App.Translations.add(
+		"attachments_drop_image_nobrowse",
+		"Drop images here to embed."	);
+		App.Translations.add(
+		"attachments_drop_notype",
+		"You can only add images to this text field (example: PNG or JPG files)."	);
+		App.Translations.add(
+		"attachments_drop_notype_canattach",
+		"You can only add images to this text field (example: PNG or JPG files). You can attach other file types to a case or result from the sidebar or result dialogs."	);
+		App.Translations.add(
+		"attachments_file_here",
+		"Drop file here, or click to browse."	);
+		App.Translations.add(
+		"attachments_remove_image",
+		"Remove"	);
+		App.Translations.add(
+		"attachments_drop_notype_canattach_jira",
+		"You can only add images to this text field (example: PNG or JPG files)."	);
+		App.Translations.add(
+		"attachments_confirm_replace",
+		"This action <strong>replaces current attachment with selected one. This will refresh all attachment\u2019s instances across your projects<\/strong> (except those on closed Runs & Plans). This cannot be undone. Do you wish to continue?"	);
+		App.Translations.add(
+		"attachments_replace_title",
+		"Replace?"	);
+		App.Translations.add(
+		"attachments_loading_error_title",
+		"Loading error"	);
+		App.Translations.add(
+		"attachments_loading_error_generic",
+		"<strong>An unexpected uploading error occurred.<\/strong><br><br>Try again!"	);
+		App.Translations.add(
+		"attachment_info_all_projects",
+		"All Projects"	);
+		App.Translations.add(
+		"attachments_confirm_delete",
+		"This <strong>deletes selected instances of your attachments.<\/strong> The files will keep on being stored on your Library. Go to Attachments on Data Storage to delete permanently."	);
+		App.Translations.add(
+		"attachments_delete",
+		"Delete"	);
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+		App.Dropzone.init();
+	}
+);
+</script>
+
+<input id="newAttachments" type="hidden">
+<div class="attachments-library attachment-library-dialog">
+		<div>
+		<div style="float: left">
+			<strong class="attachment-library-title">Media Library</strong>
+						<a id="libraryAddAttachment" class="button button-left button-add">Add New</a>
+						<a id="libraryDeleteAttachment" style="display: none;" class="button button-left button-negative button-delete" href="javascript:void(0)" onclick="this.blur(); App.Dialogs.remove('This action <strong>deletes selected attachment/s and all their instances across your projects</strong> (except those on closed Test Runs &amp; Plans) permanently. This cannot be undone. Do you wish to continue?', null, null, null, function() { App.Attachments.removeAttachments(); });; return false;">Delete</a>
+		</div>
+
+		<div style="float: right">
+			<span class="h1-additional">
+				Sort:				<a id="attachments-library-sortby" href="#sortDropdown" class="link link-dashed dropdownLink">
+					<span id="attachmentsByName">Date</span></a>
+				<span id="orderByAsc" class="hidden"><div class="icon-asc"></div></span>
+				<span id="orderByDesc" class=""><div class="icon-desc"></div></span>
+				&nbsp;|&nbsp;
+				Filter:																<a class="link link-dashed" href="javascript:void(0)" onclick="this.blur(); App.Attachments.filterAttachments(event); return false;" id="attachmentFilterByChange"><span id="attachmentFilterByEmpty" class="">None</span><span id="attachmentFilterByInfo" class="hidden toolbar-highlighted"></span></a>
+				<span id="attachmentFilterByBusy" class="busy"><div class="icon-progress-inline"></div></span>
+				<span id="attachmentFilterByReset" class="hidden">
+					<a href="javascript:void(0)" onclick="this.blur(); App.Attachments.filterReset(); return false;" class="link-tooltip" tooltip-text="Reset filters"><div class="icon-orderreset"></div></a>
+				</span>
+
+				<input type="text" name="search" id="libraryAttachmentsSearch" class="attachment-library-search">
+			</span>
+
+			<div id="sortDropdown" class="dropdown dropdown-menu sortDropdown" style="position: fixed; width: 100px">
+	<ul>
+		<li><a class="dropdown-menu-link" href="javascript:void(0)" onclick="this.blur(); App.Attachments.sortAttachments('created_on'); return false;">Date</a></li>
+		<li><a class="dropdown-menu-link" href="javascript:void(0)" onclick="this.blur(); App.Attachments.sortAttachments('name'); return false;">Name</a></li>
+		<li><a class="dropdown-menu-link" href="javascript:void(0)" onclick="this.blur(); App.Attachments.sortAttachments('size'); return false;">Size</a></li>
+	</ul>
+</div>		</div>
+	</div>
+
+	
+	<div style="margin-top: 40px; clear: both; background-color: white; height: 361px; overflow-y: auto;" id="attachmentsNewList">
+</div>
+<div id="attachmentsPagination" style="margin-bottom: 10px;"></div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+	App.Attachments.orderByOptions = {"created_on":"Date","name":"Name","size":"Size"};
+
+	var defaultTimeout = null;
+	$('#libraryAttachmentsSearch').keyup(function() {
+		if (defaultTimeout != null) clearTimeout(defaultTimeout);
+		defaultTimeout = setTimeout(
+			function() {
+				defaultTimeout = null;
+				App.Attachments.reloadRepository();
+			},
+			500
+		);
+	});
+
+});
+</script>
+	<div id="attachmentNewButtons" class="dialog-buttons-highlighted button-group">
+		<div style="margin-top: 6px; float: left;">Maximum file size: 256 MB.</div>
+		<button id="attachmentNewSubmit" type="submit" class="button button-right button-positive button-ok" style="margin-left: 7px">
+			<span class="addAttachment">Attach</span>
+		</button>
+		<a class="button button-right button-negative button-cancel dialog-action-close">
+			Cancel		</a>
+	</div>
+</div>
+
+<div class="sidebar-inner">
+	
+</div>
+
+<div class="sidebar-inner">
+						<a id="navigation-milestones-add" class="sidebar-button" href="index.php?/milestones/add/797/2&amp;parent_id=336">
+			<span>Add Milestone</span>
+		</a>
+	</div>
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+		App.Hotkeys.register(
+		'e',
+		function()
+		{
+			App.Page.load('milestones/edit/336/1');
+		}
+	);
+	
+    
+    App.Hotkeys.register(
+        'd',
+        function() {
+                        App.Dialogs.message(
+                'No defect plugin configured for this installation.',
+                'Push New Defect'
+            );
+                    }
+    );
+});
+</script>
+
+<div class="dialog" id="startMilestoneDialog" style="width: 450px">
+	<div class="dialog-title">Start Milestone</div>
+	<form id="startMilestoneForm" class="dialogFormDefault">
+		<div class="dialog-body">
+			<div class="message message-error validationError" id="startMilestoneErrors"></div>		
+			<div id="startMilestoneControls">
+			</div>
+		</div>
+		<div class="button-group dialog-buttons-highlighted">
+			<button class="button button-left button-positive button-ok dialog-action-default" id="startMilestoneSubmit" type="submit">
+					Start Milestone			</button>
+			<a class="button button-left button-negative button-cancel dialog-action-close">
+				Cancel			</a>		
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+$(document).ready(function()
+{
+		App.Translations.add(
+		"attachments_drop",
+		"Drop files here to attach, or click to browse."	);
+		App.Translations.add(
+		"attachments_drop_image",
+		"Drop images here to embed, or click to browse."	);
+		App.Translations.add(
+		"attachments_drop_image_nobrowse",
+		"Drop images here to embed."	);
+		App.Translations.add(
+		"attachments_drop_notype",
+		"You can only add images to this text field (example: PNG or JPG files)."	);
+		App.Translations.add(
+		"attachments_drop_notype_canattach",
+		"You can only add images to this text field (example: PNG or JPG files). You can attach other file types to a case or result from the sidebar or result dialogs."	);
+		App.Translations.add(
+		"attachments_file_here",
+		"Drop file here, or click to browse."	);
+		App.Translations.add(
+		"attachments_remove_image",
+		"Remove"	);
+		App.Translations.add(
+		"attachments_drop_notype_canattach_jira",
+		"You can only add images to this text field (example: PNG or JPG files)."	);
+		App.Translations.add(
+		"attachments_confirm_replace",
+		"This action <strong>replaces current attachment with selected one. This will refresh all attachment\u2019s instances across your projects<\/strong> (except those on closed Runs & Plans). This cannot be undone. Do you wish to continue?"	);
+		App.Translations.add(
+		"attachments_replace_title",
+		"Replace?"	);
+		App.Translations.add(
+		"attachments_loading_error_title",
+		"Loading error"	);
+		App.Translations.add(
+		"attachments_loading_error_generic",
+		"<strong>An unexpected uploading error occurred.<\/strong><br><br>Try again!"	);
+		App.Translations.add(
+		"attachment_info_all_projects",
+		"All Projects"	);
+		App.Translations.add(
+		"attachments_confirm_delete",
+		"This <strong>deletes selected instances of your attachments.<\/strong> The files will keep on being stored on your Library. Go to Attachments on Data Storage to delete permanently."	);
+		App.Translations.add(
+		"attachments_delete",
+		"Delete"	);
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+		App.Dropzone.init();
+	}
+);
+</script>
+
+
+    </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+    var Consts = {};
+    Consts.ajaxBaseUrl = 'index.php?';
+        Consts.ajaxErrorMessage = 'An error occurred during the last operation or your installation is currently in maintenance mode. Please try again or refresh the current page.';
+        Consts.ajaxCsrf = 'Uw46B40VFyXZhc6N1ENa';
+    Consts.ajaxVersion = '7.3.1.3001';
+    Consts.resourceBaseUrl = 'https://static.testrail.io/7.3.1.3001/';
+    Consts.dialogTitleError = 'Error';
+    Consts.statusFailed = 5;
+    Consts.statusRetest = 4;
+    Consts.statusBlocked = 2;
+    Consts.statusPassed = 1;
+    Consts.statusUntested = 3;
+    Consts.statusDefault = 1;
+	Consts.minWidth = 700;
+	Consts.minWidthOffset = 300;
+	Consts.minWidthVariable = 50;
+</script>
+
+
+<div id="userDropdown" class="dropdown dropdown-menu user-menu" rel="helpMenu" style="width: 125px">
+	<ul><li><a class="dropdown-menu-link" id="navigation-user-settings" href="index.php?/mysettings">
+			My Settings</a></li><li><a class="dropdown-menu-link" id="navigation-user-logout" href="index.php?/auth/logout">Logout</a></li></ul>
+</div>
+<div class="dialog" id="messageDialog" style="width: 350px; word-wrap: break-word">
+	<div class="dialog-title"></div>
+	<div class="dialog-body">
+		<p style="margin: 0" class="dialog-message"></p>
+	</div>
+	<div class="button-group dialog-buttons-highlighted">
+		<a class="button button-ok button-left button-positive dialog-action-default">
+			OK		</a>
+	</div>
+</div><div class="dialog" id="confirmDialog" style="width: 350px">
+	<div class="dialog-title">Confirmation</div>
+	<div class="dialog-body">
+		<p style="margin: 0" class="dialog-message"></p>
+	</div>
+	<div class="button-group dialog-buttons-highlighted">
+		<a class="button button-ok button-left button-positive dialog-action-default">
+			Yes		</a>
+		<a class="button button-cancel button-left button-negative dialog-action-close">
+			No		</a>		
+	</div>
+</div>
+
+<div id="confirmDialogOkCancel" class="dialog">
+	<div class="dialog-title">Confirmation</div>
+	<div class="dialog-body"><p class="dialog-message"></p></div>
+	<div class="button-group dialog-buttons-highlighted">
+		<a class="button button-ok button-left button-positive dialog-action-default">
+			OK		</a>
+		<a class="button button-cancel button-left button-negative dialog-action-close">
+			Cancel		</a>
+	</div>
+</div>
+<div id="tooltip" class="tooltip">
+	<div class="tooltip-pointer-up"></div>
+	<div class="tooltip-pointer-right"></div>
+	<div class="tooltip-header"></div>
+	<p style="margin: 0"></p>
+</div><div class="dialog" id="deleteDialog" style="width: 425px">
+	<div class="dialog-title">Confirmation</div>
+	<div class="dialog-body">
+		<p class="top bottom dialog-message"></p>
+		<p class="dialog-extra text-delete"></p>
+		<div class="message message-delete bottom delete-confirm-container" style="margin-top: 12px; line-height: 1">
+			<div class="checkbox">
+				<label>
+					<span class="dialog-confirm"></span>
+					<span class="dialog-confirm-busy"><div class="icon-progress-inline"></div></span>
+					<input type="checkbox" value="1" name="deleteCheckbox">
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="button-group dialog-buttons-highlighted">
+		<a class="button button-ok button-ok-disabled button-left button-positive button-disabled dialog-action-default">
+			OK		</a>
+		<a class="button button-left button-positive button-disabled button-hidden button-no-margin-right dialog-action-secondary">
+		</a>
+		<a class="button button-cancel button-left button-negative dialog-action-close">
+			Cancel		</a>
+	</div>
+</div><div class="dialog" id="dpaDialog" style="max-width: 725px">
+    <div class="dialog-title">Confirmation</div>
+    <div class="dialog-body">
+        <p class="top bottom dialog-message"></p>
+        <p class="dialog-extra text-delete"></p>
+
+        <form action="index.php?/admin/users/accept_data_processing_agreement" id="dpa_form" method="post">        <input type="hidden" name="_token" value="Uw46B40VFyXZhc6N1ENa">
+        <div class="form-group">
+            <label for="name">Please enter your full name:<span class="form-required">*</span></label>
+            <input class="form-control " type="text" name="full_name" id="full_name" maxlength="250" value="">
+        </div>
+
+        </form>
+        <div class="message message-delete bottom delete-confirm-container" style="margin-top: 12px; line-height: 1; padding-bottom: 50px">
+            <div class="checkbox">
+                <label>
+                    <span class="dialog-confirm"></span>
+                    <input type="checkbox" value="1" name="deleteCheckbox">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="button-group dialog-buttons-highlighted">
+        <a class="button button-ok button-ok-disabled button-left button-positive button-disabled dialog-action-default">
+            Submit        </a>
+        <a class="button button-cancel button-left button-negative dialog-action-close">
+            Cancel        </a>
+    </div>
+</div>
+<div class="dialog" id="trEnterpriseDialog" style="width: 350px; word-wrap: break-word">
+    <div class="dialog-title"></div>
+    <form action="index.php?/mysettings/tr_enterprise_banner_setting" id="tr_enterprise_form" method="post">    <input type="hidden" name="_token" value="Uw46B40VFyXZhc6N1ENa">    <div class="dialog-body">
+        <p style="margin: 0" class="dialog-message"></p>
+        <div class="form-group">
+            <div class="radio">
+                <label>
+                    <input type="radio" class="radio" name="tr_enterprise_banner_display" value="0" checked="">
+                    Remove for this Session                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" class="radio" name="tr_enterprise_banner_display" value="1">
+                    Remove forever                </label>
+            </div>
+        </div>
+    </div>
+    <div class="button-group dialog-buttons-highlighted">
+        <input type="submit" value="Submit" class="button button-ok button-left button-positive dialog-action-default">
+        <a class="button button-cancel button-left button-negative dialog-action-close">
+            Cancel        </a>
+    </div>
+    </form></div>
+
+<div class="dialog" id="deleteEntityAttachmentDialog" style="width: 425px">
+	<div class="dialog-title">Confirmation</div>
+	<div class="dialog-body">
+		<p class="top bottom dialog-message"></p>
+		<p class="dialog-extra text-delete"></p>
+		<div class="message message-delete bottom delete-confirm-container" style="margin-top: 12px; line-height: 1">
+			<div class="checkbox">
+				<label>
+					<span class="dialog-confirm">Don’t show me this again</span>
+					<input id="deleteDontShowAgain" type="checkbox" value="1" name="deleteCheckbox">
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="button-group dialog-buttons-highlighted">
+		<a class="button button-ok button-left button-positive dialog-action-default delete-entity-attachment-button-submit">
+			Delete		</a>
+		<a class="button button-cancel button-left button-negative dialog-action-close">
+			Cancel		</a>
+	</div>
+</div>
+
+<script>
+	$(function () {
+		$(document).delegate('.dialog-buttons-highlighted .delete-entity-attachment-button-submit', 'click', function(evt)
+		{
+			App.Attachments.dontShowEntityDeleteDialog = $('#deleteDontShowAgain').prop('checked');
+			App.Ajax.call({
+                target: '/mysettings/ajax_delete_entity_attachment_setting',
+
+                arguments: {
+                    dont_show: $('#deleteDontShowAgain').prop('checked')
+                },
+
+                error: function error(data) {
+                    App.Ajax.handleError(data);
+                }
+            });
+		});
+	});
+</script>
+
+    
+<div id="helpDropdown" class="dropdown dropdown-menu help-menu" rel="helpMenu" style="width: 175px">
+	<ul>
+        <li>
+            <a class="dropdown-menu-link" target="_blank" href="https://www.gurock.com/testrail/docs/user-guide/getting-started">
+                TestRail User Guide            </a>
+        </li>
+        <li>
+            <a class="dropdown-menu-link" target="_blank" href="http://www.gurock.com/testrail/support">
+                Support &amp; Videos            </a>
+        </li>
+        <li>
+            <a class="dropdown-menu-link" target="_blank" href="http://forum.gurock.com/">
+                Community Forum            </a>
+        </li>
+        <li class="dropdown-menu-separator"></li>
+        <li>
+            <a class="dropdown-menu-link" target="_blank" href="https://www.gurock.com/testrail/docs/user-guide/howto/keyboard-shortcuts-hotkeys">
+                Keyboard Shortcuts            </a>
+        </li>
+        <li class="dropdown-menu-separator"></li>
+        <li>
+            <a class="dropdown-menu-link" target="_blank" href="http://blog.gurock.com/">
+                Gurock Blog            </a>
+        </li>
+        <li>
+            <a class="dropdown-menu-link" target="_blank" href="http://twitter.com/testrail">
+                TestRail on Twitter            </a>
+        </li>
+        <li>
+            <a class="dropdown-menu-link" target="_blank" href="http://www.gurock.com/testrail/">
+                TestRail on the Web            </a>
+        </li>
+        <li class="dropdown-menu-separator"></li>
+        <li>
+            <a class="dropdown-menu-link dropdown-menu-link-highlighted" target="_blank" href="https://secure.gurock.com/customers/testrail/newsletter?email=atrostyanko+0401@gmail.com">
+                Subscribe to Newsletter            </a>
+        </li>
+                <li class="dropdown-menu-separator"></li>
+        <li>
+            <a class="dropdown-menu-link" href="javascript:void(0)" onclick="this.blur(); App.Help.showAbout(); return false;">
+                About TestRail            </a>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#bannerLink').bubble({
+            bubble: '#enterpriseBubble',
+            inContainer: true
+        });
+
+        $('#content').on('change', 'input:checkbox[name="entity_run"]', function() {
+            delselectAll(this, 'run')
+        });
+
+        $('#content').on('change', 'input:checkbox[name="entity_milestones"]', function() {
+            delselectAll(this, 'milestones')
+        });
+    });
+
+    function delselectAll (type, entity) {
+        let parent = $(type).data('option');
+        if (parent === undefined) {
+            $('input:checkbox[name=select_all]').each(function() {
+                let select = $(this).parent().closest('div').attr('id');
+
+                if ($('#' + select).find(type).length > 0) {
+                    parent = select;
+                }
+            });
+        }
+        let selector = '#' + parent;
+        $(selector)
+            .find('input:checkbox[name="select_all"]')
+            .prop(
+                'checked',
+                $(selector + ' input:checked[name="entity_'+ entity +'"]').length ===
+                $(selector + ' input:checkbox[name="entity_'+ entity +'"]').length
+            );
+        $('#delete-' + entity).css(
+            'display',
+            $('input:checked[name="entity_'+ entity +'"]').length > 0
+                ? 'block'
+                : 'none'
+        );
+    }
+
+    function SelectAllEntity (type) {
+        let parent = $(type).parent().closest('div').attr('id');
+        let checked_status = $(type).is(':checked');
+        $('#' + parent).find('input[type=checkbox]')
+            .attr('data-option', parent)
+            .not(':disabled')
+            .prop(
+                'checked',
+                checked_status
+            );
+        let selector = $('#' + parent).find('input:checkbox[name="entity_milestones"]').length
+            ? 'milestones'
+            : 'run';
+        $('#delete-' + selector).css(
+            'display',
+            checked_status && $('input:checked[name="entity_'+ selector +'"]').length
+                ? 'block'
+                : 'none'
+            );
+    }
+</script>
+
+
+															
+
+	
+<div id="projectGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">1/6</span>
+		Create a Project	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Welcome! Start by creating your first project. Projects in TestRail usually represent a product or software project and serve as organizational unit for cases, results and milestones. You can create as many projects as you like.</p>
+		<div class="tooltip-goal-image goal-project-help"></div>
+	</div>
+</div><div id="casesGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">2/6</span>
+		Add Test Cases	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Test cases represent a certain feature, behavior or functionality you wish to test. They often contain a description, a list of steps and expected results. Cases are organized in sections to make it easy to group related cases together.</p>
+		<div class="tooltip-goal-image goal-cases-help"></div>
+	</div>
+</div><div id="runGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">3/6</span>
+		Start a Test Run	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">To execute tests and enter results for your cases, you start a test run. You can have multiple test runs over time and reuse your test cases across runs. A test run has a status and you can easily follow its progress and test activity.</p>
+		<div class="tooltip-goal-image goal-run-help"></div>
+	</div>
+</div><div id="resultsGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">4/6</span>
+		Add Test Results	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Once you've added a test run, you can start testing and record results. A result has a status such as <em>Passed</em> or <em>Failed</em> and the statuses are signaled by different colors. Adding results contributes to the overall status and progress of the test run.</p>
+		<div class="tooltip-goal-image goal-results-help"></div>
+	</div>
+</div>
+<div id="usersGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">5/6</span>
+		Invite Team Members	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">TestRail is especially useful when used with a team. Invite other team members and build your test case repository, assign test runs and record results together. Easily track the workload and progress from the Todo tab for your entire team.</p>
+		<div class="tooltip-goal-image goal-users-help"></div>
+				<div class="checkbox" style="margin-top: 1em">
+			<label>
+				I don't plan to invite other users for now				<input type="checkbox" id="usersGoalToggle">
+			</label>
+		</div>
+			</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+		$('#usersGoalToggle').unbind('click').click(
+			function()
+			{
+				App.Users.setGoal(5, this.checked);
+			}
+		);
+	}
+);
+</script>
+
+<div id="integrationGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">6/6</span>
+		Set up Integration	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Integrate TestRail with your issue/bug tracker (such as JIRA, Redmine &amp; more), requirement tool and test automation. Start by configuring your issue integration to collaborate with your dev team, run coverage reports and link issues to results.</p>
+		<div class="tooltip-goal-image goal-integration-help"></div>
+				<div class="checkbox" style="margin-top: 1em">
+			<label>
+				I don't plan to integrate TestRail with other tools for now				<input type="checkbox" id="integrationGoalToggle">
+			</label>
+		</div>
+			</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+		$('#integrationGoalToggle').unbind('click').click(
+			function()
+			{
+				App.Users.setGoal(6, this.checked);
+			}
+		);
+	}
+);
+</script>
+
+<div id="goals" class="goals">
+	<div id="goals-banner" class="goals-banner ">
+		<span id="goals-cancel" class="goals-cancel hidden">
+			<a class="link-noline nolink" href="javascript:void(0)" onclick="this.blur(); App.Users.hideGoals(false); return false;"><div class="icon-cancel"></div></a>
+		</span>
+		<div class="goals-banner-inner">
+			<ol class="goals-progress">
+																			<li class="goals-progress-step goals-progress-step-done">
+						<span class="goals-progress-title">Create a project</span>
+																									<div class="goals-progress-marker link-tooltip goal-project-checked" tooltip-id="#projectGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step goals-progress-step-done">
+						<span class="goals-progress-title">Add cases</span>
+																									<div class="goals-progress-marker link-tooltip goal-cases-checked" tooltip-id="#casesGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step goals-progress-step-done">
+						<span class="goals-progress-title">Start a run</span>
+																									<div class="goals-progress-marker link-tooltip goal-run-checked" tooltip-id="#runGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Add results</span>
+																									<div class="goals-progress-marker link-tooltip goal-results" tooltip-id="#resultsGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Invite users</span>
+																									<div class="goals-progress-marker link-tooltip goal-users" tooltip-id="#usersGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Set up integration</span>
+																									<div class="goals-progress-marker link-tooltip goal-integration" tooltip-id="#integrationGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+							</ol>
+		</div>
+		<div id="goals-start" class="goals-start hidden">
+			<div class="goal-start"></div>
+		</div>
+		<div id="goals-finish" class="goals-finish hidden">
+			<div class="goal-finish"></div>
+		</div>
+		<div id="goals-next" class="goals-next hidden">
+			<img src="https://static.testrail.io/7.3.1.3001/images/layout/blank.gif" usemap="#goalsNextMap" class="goal-next">
+			<map name="goalsNextMap">
+				<area shape="rect" coords="691,13,726,48" href="javascript:void(0)" onclick="this.blur(); App.Users.hideGoalsNext(); return false;">
+				<area shape="rect" coords="64,305,254,339" target="_blank" href="http://www.gurock.com/testrail/support">
+				<area shape="rect" coords="280,305,470,339" target="_blank" href="http://blog.gurock.com/">
+				<area shape="rect" coords="496,305,686,339" target="_blank" href="http://www.gurock.com/testrail/videos/introduction-projects/">
+			</map>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+				var timer = null;
+		$('#goals').unbind('mouseenter').bind('mouseenter', function()
+		{
+			timer = setTimeout(
+				function()
+				{
+					$('#goals-cancel').fadeTo(250, 1);
+				},
+				2500
+			);
+		});
+
+		$('#goals').unbind('mouseleave').bind('mouseleave', function()
+		{
+			$('#goals-cancel').hide();
+			if (timer)
+			{
+				clearTimeout(timer);
+				timer = null;
+			}
+		});
+			}
+);
+</script>
+<div class="dialog dialog_attachment" id="attachmentInfoDialog" style="width: 900px; height: 531px;"></div>
+<div id="newAttachmentTemplate" style="display: none;">
+	<div style="width: 150px; height: 150px; {{attachment_thumbnail}}" class="attachment-block attachment-{{attachment_icon}} {{attachment_selected_class}} lazy" id="libraryAttachment-{{attachment_id}}" onclick="App.Attachments.showInfoDialog('{{attachment_id}}');" title="{{attachment_name}}">
+	<div class="attachment-icon" style="{{attachment_icon_style}}"></div>
+	<div class="attachment-name">
+		{{attachment_truncated_name}}
+	</div>
+	<img {{attachment_src_tag}}="{{attachment_imgurl}}" {{attachment_onerror_tag}}="{{attachment_img_onerror}}" class="hidden-image">
+	<div class="attachment-selection {{attachment_selected_class}}" onclick="App.Attachments.toggleSelection('{{attachment_id}}', event, {{project_id}});"></div>
+</div>
+</div>
+<div id="libraryAttachmentsAddItemTemplate" style="display: none;">
+	<div id="{{element_id}}" class="attachment-library-add">
+	<div class="attachment-library-add-icon"></div>
+</div>
+</div>
+
+															
+
+	
+<div id="projectGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">1/6</span>
+		Create a Project	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Welcome! Start by creating your first project. Projects in TestRail usually represent a product or software project and serve as organizational unit for cases, results and milestones. You can create as many projects as you like.</p>
+		<div class="tooltip-goal-image goal-project-help"></div>
+	</div>
+</div><div id="casesGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">2/6</span>
+		Add Test Cases	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Test cases represent a certain feature, behavior or functionality you wish to test. They often contain a description, a list of steps and expected results. Cases are organized in sections to make it easy to group related cases together.</p>
+		<div class="tooltip-goal-image goal-cases-help"></div>
+	</div>
+</div><div id="runGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">3/6</span>
+		Start a Test Run	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">To execute tests and enter results for your cases, you start a test run. You can have multiple test runs over time and reuse your test cases across runs. A test run has a status and you can easily follow its progress and test activity.</p>
+		<div class="tooltip-goal-image goal-run-help"></div>
+	</div>
+</div><div id="resultsGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">4/6</span>
+		Add Test Results	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Once you've added a test run, you can start testing and record results. A result has a status such as <em>Passed</em> or <em>Failed</em> and the statuses are signaled by different colors. Adding results contributes to the overall status and progress of the test run.</p>
+		<div class="tooltip-goal-image goal-results-help"></div>
+	</div>
+</div>
+<div id="usersGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">5/6</span>
+		Invite Team Members	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">TestRail is especially useful when used with a team. Invite other team members and build your test case repository, assign test runs and record results together. Easily track the workload and progress from the Todo tab for your entire team.</p>
+		<div class="tooltip-goal-image goal-users-help"></div>
+				<div class="checkbox" style="margin-top: 1em">
+			<label>
+				I don't plan to invite other users for now				<input type="checkbox" id="usersGoalToggle">
+			</label>
+		</div>
+			</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+		$('#usersGoalToggle').unbind('click').click(
+			function()
+			{
+				App.Users.setGoal(5, this.checked);
+			}
+		);
+	}
+);
+</script>
+
+<div id="integrationGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">6/6</span>
+		Set up Integration	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Integrate TestRail with your issue/bug tracker (such as JIRA, Redmine &amp; more), requirement tool and test automation. Start by configuring your issue integration to collaborate with your dev team, run coverage reports and link issues to results.</p>
+		<div class="tooltip-goal-image goal-integration-help"></div>
+				<div class="checkbox" style="margin-top: 1em">
+			<label>
+				I don't plan to integrate TestRail with other tools for now				<input type="checkbox" id="integrationGoalToggle">
+			</label>
+		</div>
+			</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+		$('#integrationGoalToggle').unbind('click').click(
+			function()
+			{
+				App.Users.setGoal(6, this.checked);
+			}
+		);
+	}
+);
+</script>
+
+<div id="goals" class="goals">
+	<div id="goals-banner" class="goals-banner ">
+		<span id="goals-cancel" class="goals-cancel hidden">
+			<a class="link-noline nolink" href="javascript:void(0)" onclick="this.blur(); App.Users.hideGoals(false); return false;"><div class="icon-cancel"></div></a>
+		</span>
+		<div class="goals-banner-inner">
+			<ol class="goals-progress">
+																			<li class="goals-progress-step goals-progress-step-done">
+						<span class="goals-progress-title">Create a project</span>
+																									<div class="goals-progress-marker link-tooltip goal-project-checked" tooltip-id="#projectGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step goals-progress-step-done">
+						<span class="goals-progress-title">Add cases</span>
+																									<div class="goals-progress-marker link-tooltip goal-cases-checked" tooltip-id="#casesGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step goals-progress-step-done">
+						<span class="goals-progress-title">Start a run</span>
+																									<div class="goals-progress-marker link-tooltip goal-run-checked" tooltip-id="#runGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Add results</span>
+																									<div class="goals-progress-marker link-tooltip goal-results" tooltip-id="#resultsGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Invite users</span>
+																									<div class="goals-progress-marker link-tooltip goal-users" tooltip-id="#usersGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Set up integration</span>
+																									<div class="goals-progress-marker link-tooltip goal-integration" tooltip-id="#integrationGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+							</ol>
+		</div>
+		<div id="goals-start" class="goals-start hidden">
+			<div class="goal-start"></div>
+		</div>
+		<div id="goals-finish" class="goals-finish hidden">
+			<div class="goal-finish"></div>
+		</div>
+		<div id="goals-next" class="goals-next hidden">
+			<img src="https://static.testrail.io/7.3.1.3001/images/layout/blank.gif" usemap="#goalsNextMap" class="goal-next">
+			<map name="goalsNextMap">
+				<area shape="rect" coords="691,13,726,48" href="javascript:void(0)" onclick="this.blur(); App.Users.hideGoalsNext(); return false;">
+				<area shape="rect" coords="64,305,254,339" target="_blank" href="http://www.gurock.com/testrail/support">
+				<area shape="rect" coords="280,305,470,339" target="_blank" href="http://blog.gurock.com/">
+				<area shape="rect" coords="496,305,686,339" target="_blank" href="http://www.gurock.com/testrail/videos/introduction-projects/">
+			</map>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+				var timer = null;
+		$('#goals').unbind('mouseenter').bind('mouseenter', function()
+		{
+			timer = setTimeout(
+				function()
+				{
+					$('#goals-cancel').fadeTo(250, 1);
+				},
+				2500
+			);
+		});
+
+		$('#goals').unbind('mouseleave').bind('mouseleave', function()
+		{
+			$('#goals-cancel').hide();
+			if (timer)
+			{
+				clearTimeout(timer);
+				timer = null;
+			}
+		});
+			}
+);
+</script>
+
+            <script type="text/javascript" src="https://static.testrail.io/7.3.1.3001/js/extensions-combined.js"></script>
+        <script type="text/javascript" src="https://static.testrail.io/7.3.1.3001/js/application-combined.js"></script>
+    
+	<script type="text/javascript" id="js-js-indicator" src="https://static.testrail.io/7.3.1.3001/js/indicator.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+		App.Translations.add(
+		"timespans_hour_short",
+		"h"	);
+		App.Translations.add(
+		"timespans_minute_short",
+		"m"	);
+		App.Translations.add(
+		"timespans_second_short",
+		"s"	);
+	});
+</script>
+<script type="application/javascript">
+(function(apiKey){ // <-- passed in at the bottom
+    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+    v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+        // Create a `<script>` tag linked to your application-specific Agent build from our CDN...
+        y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);
+    })(window,document,'script','pendo');
+    pendo.initialize({
+        sanitizeUrl: function(url) {
+            return url.replace('index.php?', 'index.php')
+        },
+        visitor: {
+            id: '673720-1',
+            is_admin: true,
+            is_active: true        },
+        account: {
+            id: '673720'
+        }
+    });
+})('1c20428c-1995-4c00-6e1c-daff12af9c00');
+</script>
+
+<script>
+    $(function() {
+        App.Sidebar.init();
+        
+    });
+</script>
+
+
+
+<div id="fancy_overlay"></div><div id="fancy_wrap"><div class="fancy_loading" id="fancy_loading"><div id="fancy_loading_spinner"></div></div><div id="fancy_outer"><div id="fancy_inner"><div id="fancy_close"></div><div id="fancy_bg"><div class="fancy_bg fancy_bg_n"></div><div class="fancy_bg fancy_bg_ne"></div><div class="fancy_bg fancy_bg_e"></div><div class="fancy_bg fancy_bg_se"></div><div class="fancy_bg fancy_bg_s"></div><div class="fancy_bg fancy_bg_sw"></div><div class="fancy_bg fancy_bg_w"></div><div class="fancy_bg fancy_bg_nw"></div></div><a href="javascript:;" id="fancy_left"><span class="fancy_ico" id="fancy_left_ico"></span></a><a href="javascript:;" id="fancy_right"><span class="fancy_ico" id="fancy_right_ico"></span></a><div id="fancy_content"></div><div id="fancy_title"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="fancy_title" id="fancy_title_left"></td><td class="fancy_title" id="fancy_title_main"><div></div></td><td class="fancy_title" id="fancy_title_right"></td></tr></tbody></table></div></div></div></div><div id="jstree-marker" style="display: none;"></div><div class="fusioncharts-smartlabel-container" aria-hidden="true" role="presentation" style="position: absolute; top: -9999em; white-space: nowrap; padding: 0px; width: 1px; height: 1px; overflow: hidden;"></div><button aria-label="Open Resource Center" aria-expanded="false" type="button" id="_pendo-badge_Hhf7H23vJ3hk1jdtR271Im-1A3o" data-layout="badgeResourceCenter" class="_pendo-badge _pendo-resource-center-badge-container _pendo-badge_" style="border-radius: 28px; inset: auto 10px 10px auto; margin: 0px; position: fixed; z-index: 19000; background: rgba(255, 255, 255, 0); padding: 0px; height: 56px; width: 56px; box-shadow: rgba(0, 0, 0, 0.15) 2px 0px 6px 0px; border: 0px; float: none; vertical-align: text-bottom; cursor: pointer; display: inline-block;"><style type="text/css" scoped="scoped" style="white-space: pre-wrap;"></style><img id="pendo-image-badge-32cf3f20" src="https://pendo-static-5699730914541568.storage.googleapis.com/hnixR8-p_2H5A6MW6X1ymGBKyug/guide-media-6bd9592b-f953-4757-9ef7-5c226a43bb8d" data-_pendo-image-1="" class="_pendo-image _pendo-badge-image _pendo-resource-center-badge-image" style="display: block; height: 56px; width: 56px; padding: 0px; margin: 0px; line-height: 1; border: none; box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 0px; float: none; vertical-align: baseline;"></button></body></html>
