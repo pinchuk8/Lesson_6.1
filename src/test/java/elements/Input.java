@@ -23,4 +23,5 @@ public class Input {
     public void sendKeys(CharSequence... charSequences) {
         uiElement.sendKeys(charSequences);
     }
+    public boolean isDisplayed(){return uiElement.isDisplayed();}
 }
