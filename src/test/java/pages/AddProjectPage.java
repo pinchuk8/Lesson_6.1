@@ -32,3 +32,5 @@ public class AddProjectPage extends BasePage {
         driver.findElement(By.xpath(typeRadioButtonSelector.replace("replace", String.valueOf(type))));
     }
 }
+
+

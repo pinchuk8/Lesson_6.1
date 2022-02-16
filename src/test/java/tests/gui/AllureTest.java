@@ -41,4 +41,3 @@ public class AllureTest {
         Assert.assertTrue(true);
     }
 }
-
