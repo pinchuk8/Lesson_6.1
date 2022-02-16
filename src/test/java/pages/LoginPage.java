@@ -50,4 +50,16 @@ public class LoginPage extends BasePage {
         getPasswordField().sendKeys(user.getPassword());
         getLoginButton().click();
     }
+    public void login(String username,String password) {
+        User user = User.builder()
+                .email(username)
+                .password(password)
+                .build();
+        login(user);//передаём объект в метод логин
+    }
+    public void login(User user,String password) {
+        getEmailField().sendKeys(user.getEmail());
+        getPasswordField().sendKeys(user.getPassword());
+        getLoginButton().click();
+    }
 }

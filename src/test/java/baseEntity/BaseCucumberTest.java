@@ -4,6 +4,6 @@ import org.openqa.selenium.WebDriver;
 import pages.LoginPage;
 
 public class BaseCucumberTest {
-    public WebDriver driver;
-    LoginPage loginPage;
+    public static WebDriver driver;
+    //public LoginPage loginPage;
 }
