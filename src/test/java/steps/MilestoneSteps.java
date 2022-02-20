@@ -4,6 +4,7 @@ import core.ReadProperties;
 import models.Milestone;
 import models.Project;
 import org.openqa.selenium.By;
+import pages.DashboardPage;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;

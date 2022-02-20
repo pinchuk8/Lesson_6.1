@@ -2,11 +2,9 @@ package tests;
 
 import baseEntities.BaseTest;
 import models.Case;
-import models.Milestone;
 import models.Project;
 import org.testng.annotations.Test;
 import steps.CaseSteps;
-import steps.MilestoneSteps;
 import steps.ProjectSteps;
 import utils.Randomization;
 
