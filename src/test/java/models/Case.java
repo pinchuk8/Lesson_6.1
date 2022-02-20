@@ -7,4 +7,5 @@ import lombok.Data;
 @Builder
 public class Case {
     private String name;
+    private String precondition;
 }
